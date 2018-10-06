@@ -451,6 +451,7 @@ MonoBehaviour:
   - {fileID: 1968197496329944, guid: 8e888fe90eaec8947bb8c19de30b5276, type: 2}
   - {fileID: 1968197496329944, guid: 069358e41c7c8334b908d1eb6136acc8, type: 2}
   selectedCharacters: 00000000
+  scene: Menu
   owner: 0
 --- !u!4 &885274069
 Transform:
