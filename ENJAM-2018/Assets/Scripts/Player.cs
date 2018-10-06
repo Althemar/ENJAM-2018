@@ -22,6 +22,7 @@ namespace ENJAM2018
         PlayersManager playerManager;
         PlayerController playerController;
         CameraShake cameraShake;
+        Animator animator;
 
         private SequenceTile tile;
         private LevelSequence level;
@@ -43,12 +44,12 @@ namespace ENJAM2018
             set { score = value; }
         }
         
-
         private void Start() {
             playerManager = GetComponentInParent<PlayersManager>();
             playerController = GetComponent<PlayerController>();
             level = GetComponentInParent<LevelSequence>();
             cameraShake = Camera.main.GetComponent<CameraShake>();
+            animator = GetComponent<Animator>();
 
             scoreUI.Player = this;
             scoreUI.PlayerString = playerController.PlayerString;
@@ -73,6 +74,7 @@ namespace ENJAM2018
 
                 if (moveProgress >= 1) {
                     moving = false;
+                    animator.SetBool("Is Moving", false);
                     moveProgress = 0;
                 }
             }
@@ -80,6 +82,7 @@ namespace ENJAM2018
 
         public void Move(bool goForward) {
             moveProgress = 0;
+            animator.SetBool("Is Moving", true);
             moving = true;
 
             tile.RemovePlayerFromTile(this);
@@ -121,11 +124,11 @@ namespace ENJAM2018
                 return;
             }
 
-            if (keyId == tile.requiredInput.inputKey && level.TilePosition(tile) < 10) {
+            if (keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
                 Move(true);
                 IncreaseScore();
             }
-            else if (keyId != tile.requiredInput.inputKey) {
+            else if (keyId != tile.next.requiredInput.inputKey) {
                 Move(false);
                 combo = 0;
                 scoreMultiplicator = 1;

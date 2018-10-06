@@ -22,8 +22,8 @@ namespace ENJAM2018
         }
 
         public void RecordScore() {
-            for (int i = 0; i < PlayersManager.Instance.players.Count; i++) {
-                scores.Add(PlayersManager.Instance.players[i].Score);
+            for (int i = 0; i < PlayersManager.Instance.Players.Count; i++) {
+                scores.Add(PlayersManager.Instance.Players[i].Score);
             }
         }
     }

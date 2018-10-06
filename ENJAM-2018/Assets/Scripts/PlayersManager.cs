@@ -9,8 +9,15 @@ namespace ENJAM2018
     {
         public static PlayersManager Instance;
 
-        public List<Player> players;
+        List<Player> players;
         public int beginTile = 4;
+
+        public List<Player> Players
+        {
+            get { return players; }
+        }
+
+        
 
         [Header("Move variables")]
         public float MovingBackSpeed;
@@ -32,6 +39,7 @@ namespace ENJAM2018
             if (Instance == null) {
                 Instance = this;
             }
+            players = new List<Player>();
         }
 
     }
