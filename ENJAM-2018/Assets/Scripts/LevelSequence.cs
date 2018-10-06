@@ -2,6 +2,7 @@
 using UnityEngine;
 
 namespace ENJAM2018 {
+	[RequireComponent(typeof(SequenceGenerator))]
 	public class LevelSequence : MonoBehaviour {
 
 		[SerializeField] private Camera mainCamera;
@@ -15,23 +16,21 @@ namespace ENJAM2018 {
 		[SerializeField] private GameObject prefabDown;
 		[SerializeField] private GameObject prefabLeft;
 		
-		private SequenceTile[] tiles;
+		public SequenceTile[] Tiles { get; private set; }
 		private Rect cameraBounds;
-		private float distanceTravelled = 0f;
-
-        public SequenceTile[] Tiles
-        {
-            get { return tiles; }
-        }
+		public float distanceTravelled { get; private set; }
+		private SequenceGenerator generator;
 
 		private void Awake() {
+			generator = GetComponent<SequenceGenerator>();
+			generator.Init();
 			if (mainCamera == null) {
 				mainCamera = Camera.main;
 			}
 			float vertExtent = mainCamera.orthographicSize;
 			float horizExtent = vertExtent * (Screen.width / (float) Screen.height);
 			cameraBounds = new Rect(-horizExtent, -vertExtent, horizExtent * 2, vertExtent * 2);
-			tiles = new SequenceTile[(int) (cameraBounds.width / tileSize) + 2];
+			Tiles = new SequenceTile[(int) (cameraBounds.width / tileSize) + 2];
 			SequenceInput.Init(prefabUp, prefabRight, prefabDown, prefabLeft);
 
 			GenerateAllTiles();
@@ -45,10 +44,10 @@ namespace ENJAM2018 {
 		
 		private void FixedUpdate() {
 			speed += 1f / speedIncreaseDistance * Time.fixedDeltaTime;
-			float distance = speed * Time.fixedDeltaTime;
-			transform.position -= Vector3.right * distance;
-			distanceTravelled += distance;
-			int tilesOutCount = (int) ((cameraBounds.xMax - tiles[tiles.Length - 1].transform.position.x + tileSize / 2f) / tileSize);
+			transform.position -= Vector3.right * speed * Time.fixedDeltaTime;
+			distanceTravelled = -transform.position.x - cameraBounds.width / 2f + tileSize / 2f;
+
+			int tilesOutCount = (int) ((cameraBounds.xMax - Tiles[Tiles.Length - 1].transform.position.x + tileSize / 2f) / tileSize);
 			for (int i = 0; i < tilesOutCount; i++) {
 				DeleteLeftTile();
 				GenerateRightTile();
@@ -56,34 +55,39 @@ namespace ENJAM2018 {
 		}
 
 		private void DeleteLeftTile() {
-			Destroy(tiles[0].gameObject);
-			for (int i = 1; i < tiles.Length; i++) {
-				tiles[i - 1] = tiles[i];
+			Destroy(Tiles[0].gameObject);
+			for (int i = 1; i < Tiles.Length; i++) {
+				Tiles[i - 1] = Tiles[i];
 			}
 		}
 
 		private void GenerateRightTile() {
-			SequenceTile tile = CreateRandomTile(tiles[tiles.Length - 2].transform.localPosition.x + tileSize);
-			tiles[tiles.Length - 1] = tile;
-			tile.previous = tiles[tiles.Length - 2];
-			tiles[tiles.Length - 2].next = tile;
+			SequenceTile tile = CreateTile(generator.GenerateNext(), Tiles[Tiles.Length - 2].transform.localPosition.x + tileSize);
+			Tiles[Tiles.Length - 1] = tile;
+			tile.previous = Tiles[Tiles.Length - 2];
+			Tiles[Tiles.Length - 2].next = tile;
 		}
 
 		private void GenerateAllTiles() {
-			for (int i = 0; i < tiles.Length; i++) {
-				SequenceTile tile = CreateRandomTile(tileSize * i);
-				tiles[i] = tile;
+			SequenceInputType[] seq = generator.GenerateSequence(Tiles.Length);
+			for (int i = 0; i < Tiles.Length; i++) {
+				SequenceTile tile = CreateTile(seq[i], tileSize * i);
+				Tiles[i] = tile;
 			}
-			for (int i = 1; i < tiles.Length - 1; i++) {
-				tiles[i].next = tiles[i + 1];
-				tiles[i].previous = tiles[i - 1];
+			for (int i = 1; i < Tiles.Length - 1; i++) {
+				Tiles[i].next = Tiles[i + 1];
+				Tiles[i].previous = Tiles[i - 1];
 			}
-			tiles[0].next = tiles[1];
-			tiles[tiles.Length - 1].previous = tiles[tiles.Length - 2];
+			Tiles[0].next = Tiles[1];
+			Tiles[Tiles.Length - 1].previous = Tiles[Tiles.Length - 2];
 		}
 
 		private SequenceTile CreateRandomTile(float distanceFromStart) {
-			SequenceInput input = SequenceInput.GetRandom();
+			return CreateTile(SequenceInput.GetRandomType(), distanceFromStart);
+		}
+
+		private SequenceTile CreateTile(SequenceInputType inputType, float distanceFromStart) {
+			SequenceInput input = inputType.GetSequenceInput();
 			GameObject go = Instantiate(input.prefab, transform);
 			SequenceTile tile = go.GetComponent<SequenceTile>();
 			tile.requiredInput = input;
@@ -92,8 +96,8 @@ namespace ENJAM2018 {
 		}
 
         public int TilePosition(SequenceTile tile) {
-            for (int i = 0; i < tiles.Length; i++) {
-                if (tiles[i] == tile) {
+            for (int i = 0; i < Tiles.Length; i++) {
+                if (Tiles[i] == tile) {
                     return i;
                 }
             }

@@ -21,6 +21,7 @@ namespace ENJAM2018
         
         PlayersManager playerManager;
         PlayerController playerController;
+        CameraShake cameraShake;
 
         private SequenceTile tile;
         private LevelSequence level;
@@ -30,6 +31,7 @@ namespace ENJAM2018
             playerManager = GetComponentInParent<PlayersManager>();
             playerController = GetComponent<PlayerController>();
             level = GetComponentInParent<LevelSequence>();
+            cameraShake = Camera.main.GetComponent<CameraShake>();
 
             scoreUI.Player = this;
             scoreUI.PlayerString = playerController.PlayerString;
@@ -66,6 +68,7 @@ namespace ENJAM2018
             else {
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
+                
             }
             tile.AddPlayerOnTile(this);
         }
@@ -100,6 +103,7 @@ namespace ENJAM2018
             }
             else if (keyId != tile.requiredInput.inputKey) {
                 Move(false);
+                StartCoroutine(cameraShake.Shake(0.15f, .2f));
                 combo = 0;
                 scoreMultiplicator = 1;
                 scoreUI.SetCombo(combo);

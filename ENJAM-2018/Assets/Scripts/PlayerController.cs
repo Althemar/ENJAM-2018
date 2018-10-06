@@ -22,7 +22,6 @@ namespace ENJAM2018
 
         void Start() {
             
-
             playerString = ((int)owner + 1).ToString();
             player = GetComponent<Player>();
 
@@ -36,7 +35,6 @@ namespace ENJAM2018
             else {
                 inputManager = InputManager.Instance.xboxController;
             }
-
         }
 
         void Update() {
