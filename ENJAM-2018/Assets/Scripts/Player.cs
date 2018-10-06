@@ -26,9 +26,10 @@ namespace ENJAM2018
 
         private SequenceTile tile;
         private LevelSequence level;
-		private ParticleSystem particleSystem;
+		private ParticleSystem particleSystemDash;
+		private ParticleSystem particleSystemFail;
 
-        public bool Lost
+		public bool Lost
         {
             get { return lost; }
         }
@@ -46,8 +47,9 @@ namespace ENJAM2018
         }
         
         private void Start() {
-			particleSystem = GetComponentInChildren<ParticleSystem>();
-			ParticleSystem.MainModule mainMod = particleSystem.main;
+			particleSystemDash = transform.Find("ParticlesDash").GetComponent<ParticleSystem>();
+			particleSystemFail = transform.Find("ParticlesFail").GetComponent<ParticleSystem>();
+			ParticleSystem.MainModule mainMod = particleSystemDash.main;
 			mainMod.simulationSpace = ParticleSystemSimulationSpace.Custom;
 			mainMod.customSimulationSpace = transform.parent;
 
@@ -74,12 +76,12 @@ namespace ENJAM2018
 		}
 
 		void FixedUpdate() {
-			ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
-			particleSystem.GetParticles(particles);
+			ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystemDash.particleCount];
+			particleSystemDash.GetParticles(particles);
 			for (int i = 0; i < particles.Length; i++) {
 				particles[i].position = transform.localPosition;
 			}
-			particleSystem.SetParticles(particles, particles.Length);
+			particleSystemDash.SetParticles(particles, particles.Length);
 			
             if (!playing || GameManager.Instance.GameState == GameManager.GameStates.ending) {
                 return;
@@ -108,12 +110,12 @@ namespace ENJAM2018
             if (goForward) {
                 tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
-				particleSystem.Emit(10);
+				particleSystemDash.Emit(1);
             }
             else {
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
-                
+				particleSystemFail.Play();
             }
             tile.AddPlayerOnTile(this);
         }
