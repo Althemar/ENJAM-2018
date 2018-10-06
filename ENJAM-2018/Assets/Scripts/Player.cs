@@ -25,6 +25,7 @@ namespace ENJAM2018
 
         private SequenceTile tile;
         private LevelSequence level;
+		private ParticleSystem particleSystem;
 
         public bool Lost
         {
@@ -45,6 +46,11 @@ namespace ENJAM2018
         
 
         private void Start() {
+			particleSystem = GetComponentInChildren<ParticleSystem>();
+			ParticleSystem.MainModule mainMod = particleSystem.main;
+			mainMod.simulationSpace = ParticleSystemSimulationSpace.Custom;
+			mainMod.customSimulationSpace = transform.parent;
+
             playerManager = GetComponentInParent<PlayersManager>();
             playerController = GetComponent<PlayerController>();
             level = GetComponentInParent<LevelSequence>();
@@ -59,8 +65,21 @@ namespace ENJAM2018
             transform.position = new Vector3(tileX, transform.position.y, transform.position.z);
         }
 
-        void FixedUpdate() {
+		private void Update() {
+			if (Input.GetKeyDown(KeyCode.A)) {
+				Move(true);
+				IncreaseScore();
+			}
+		}
 
+		void FixedUpdate() {
+			ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
+			particleSystem.GetParticles(particles);
+			for (int i = 0; i < particles.Length; i++) {
+				particles[i].position = transform.localPosition;
+			}
+			particleSystem.SetParticles(particles, particles.Length);
+			
             if (!playing || GameManager.Instance.GameState == GameManager.GameStates.ending) {
                 return;
             }
@@ -86,6 +105,7 @@ namespace ENJAM2018
             if (goForward) {
                 tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
+				particleSystem.Emit(10);
             }
             else {
                 tile = tile.previous;
