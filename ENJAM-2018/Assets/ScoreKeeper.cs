@@ -2,20 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreKeeper : MonoBehaviour {
+namespace ENJAM2018
+{
 
-    public List<int> scores;
-
-    public List<int> Scores
+    public class ScoreKeeper : MonoBehaviour
     {
-        get { return scores; }
+
+        List<int> scores;
+
+        public List<int> Scores
+        {
+            get { return scores; }
+        }
+
+        // Use this for initialization
+        void Start() {
+            DontDestroyOnLoad(gameObject);
+            scores = new List<int>();
+        }
+
+        public void RecordScore() {
+            for (int i = 0; i < PlayersManager.Instance.players.Count; i++) {
+                scores.Add(PlayersManager.Instance.players[i].Score);
+            }
+        }
     }
-
-	// Use this for initialization
-	void Start () {
-        DontDestroyOnLoad(gameObject);
-	}
-
-
-	
 }

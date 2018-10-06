@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,16 +8,28 @@ namespace ENJAM2018
     {
         public static GameManager Instance;
 
-        PlayersManager playersManager;
+        public ScoreKeeper scoreKeeper;
 
-        public enum GameState
+
+        public int NumberOfPlayers;
+        public GameObject PlayerPrefab;
+        public GameObject PlayerScoreUIPrefab;
+        public GameObject Level;
+        public float spaceBetweenPlayers;
+
+        public enum GameStates
         {
             beginning,
             playing,
             ending
         }
 
-        public GameState gameState = GameState.playing;
+        GameStates gameState = GameStates.playing;
+
+        public GameStates GameState
+        {
+            get { return gameState; }
+        }
 
         private void Awake() {
             if (Instance == null) {
@@ -29,25 +40,53 @@ namespace ENJAM2018
             }
         }
 
+
+        private void Start() {
+
+            float yPos;
+            if (NumberOfPlayers % 2 == 0) {
+                yPos = 0 + NumberOfPlayers / 2 - spaceBetweenPlayers / 2;
+               
+            }
+            else if (NumberOfPlayers > 1){
+                yPos = 0 + spaceBetweenPlayers * (NumberOfPlayers - 2);
+            }
+            else {
+                yPos = 0;
+            }
+
+            int playerId = 0;
+
+            for (int i = 0; i < NumberOfPlayers; i++) {
+                Player player = Instantiate(PlayerPrefab, Level.transform).GetComponent<Player>();
+                player.transform.position = new Vector3(0, yPos, 0);
+                yPos -= spaceBetweenPlayers;
+
+                player.GetComponent<PlayerController>().Owner = (PlayerController.Players)playerId;
+                playerId++;
+                player.scoreUI = UIManager.Instance.CreatePlayerScoreUI(PlayerScoreUIPrefab);         
+            }
+        }
+
         public void EndGame() {
-            
-            // Return if not all players have lost
-            for (int i = 0; i < playersManager.players.Count; i++) {
-                if (!playersManager.players[i].Lost) {
+            for (int i = 0; i < PlayersManager.Instance.players.Count; i++) {
+                if (!PlayersManager.Instance.players[i].Lost) {
                     return;
                 }
             }
-            gameState = GameState.ending;
+            gameState = GameStates.ending;
 
             UIManager.Instance.DisplayEndingText();
+            StartCoroutine(LoadingLeaderboard());
+
+            scoreKeeper.RecordScore();
+
         }
 
         public IEnumerator LoadingLeaderboard() {
             yield return new WaitForSeconds(4);
             SceneManager.LoadScene("LeaderBoard");
         }
-
-        
     }
 }
 

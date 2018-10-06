@@ -36,6 +36,12 @@ namespace ENJAM2018
             get { return playing; }
             set { playing = value; }
         }
+
+        public int Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
         
 
         private void Start() {
@@ -55,13 +61,14 @@ namespace ENJAM2018
 
         void FixedUpdate() {
 
-            if (!playing || GameManager.Instance.gameState == GameManager.GameState.ending) {
+            if (!playing || GameManager.Instance.GameState == GameManager.GameStates.ending) {
                 return;
             }
 
             if (moving) {
                 moveProgress += moveSpeed * Time.fixedDeltaTime;
                 Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x, transform.position.y, transform.position.z);
+
                 transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
 
                 if (moveProgress >= 1) {

@@ -7,7 +7,7 @@ namespace ENJAM2018
     public class PlayerController : MonoBehaviour
     {
         
-        enum Players { Player1, Player2, Player3, Player4 }
+        public enum Players { Player1, Player2, Player3, Player4 }
 
         [SerializeField] Players owner;
         Player player;
@@ -19,6 +19,11 @@ namespace ENJAM2018
             get { return playerString; }
         }
 
+        public Players Owner
+        {
+            get { return owner; }
+            set { owner = value; }
+        }
 
         void Start() {
             
@@ -42,6 +47,8 @@ namespace ENJAM2018
                 player.Playing = false;
             }
         }
+
+        
 
         void Update() {
             if (!player.Playing) {
