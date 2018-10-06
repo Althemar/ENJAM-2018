@@ -24,10 +24,7 @@ namespace ENJAM2018 {
 			}
 			float vertExtent = mainCamera.orthographicSize;
 			float horizExtent = vertExtent * (Screen.width / (float) Screen.height);
-			Debug.Log("horizExt " + horizExtent);
 			cameraBounds = new Rect(-horizExtent, -vertExtent, horizExtent * 2, vertExtent * 2);
-			Debug.Log(cameraBounds.xMin);
-			Debug.Log(cameraBounds.yMin);
 			tiles = new SequenceTile[(int) (cameraBounds.width / tileSize) + 2];
 			SequenceInput.Init(prefabUp, prefabRight, prefabDown, prefabLeft);
 		}
