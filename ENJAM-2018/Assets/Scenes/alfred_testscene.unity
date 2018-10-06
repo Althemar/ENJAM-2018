@@ -460,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 518032544}
   - component: {fileID: 518032545}
+  - component: {fileID: 518032546}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -504,6 +505,38 @@ MonoBehaviour:
     type: 2}
   prefabDown: {fileID: 1455064947962380, guid: d5644f2832643a24bb10292660ba21c5, type: 2}
   prefabLeft: {fileID: 1455064947962380, guid: 35bbf9c393c7dcf4b98bf1afa13e1e54, type: 2}
+--- !u!114 &518032546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518032543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6da57384858d1c48986fed3eee180b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phases:
+  - probDown: 0.5
+    probRight: 0.5
+    probLeft: 0
+    probUp: 0
+    length: 10
+  - probDown: 0.425
+    probRight: 0.425
+    probLeft: 0.15
+    probUp: 0
+    length: 10
+  - probDown: 0.33
+    probRight: 0.33
+    probLeft: 0.34
+    probUp: 0
+    length: 10
+  - probDown: 0.3
+    probRight: 0.3
+    probLeft: 0.2
+    probUp: 0.2
+    length: 10
 --- !u!1 &541198842
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using UnityEngine;
 
 namespace ENJAM2018 {
+	[RequireComponent(typeof(SequenceGenerator))]
 	public class LevelSequence : MonoBehaviour {
 
 		[SerializeField] private Camera mainCamera;
@@ -18,9 +19,11 @@ namespace ENJAM2018 {
 		public SequenceTile[] Tiles { get; private set; }
 		private Rect cameraBounds;
 		public float distanceTravelled { get; private set; }
-
+		private SequenceGenerator generator;
 
 		private void Awake() {
+			generator = GetComponent<SequenceGenerator>();
+			generator.Init();
 			if (mainCamera == null) {
 				mainCamera = Camera.main;
 			}
@@ -59,15 +62,16 @@ namespace ENJAM2018 {
 		}
 
 		private void GenerateRightTile() {
-			SequenceTile tile = CreateRandomTile(Tiles[Tiles.Length - 2].transform.localPosition.x + tileSize);
+			SequenceTile tile = CreateTile(generator.GenerateNext(), Tiles[Tiles.Length - 2].transform.localPosition.x + tileSize);
 			Tiles[Tiles.Length - 1] = tile;
 			tile.previous = Tiles[Tiles.Length - 2];
 			Tiles[Tiles.Length - 2].next = tile;
 		}
 
 		private void GenerateAllTiles() {
+			SequenceInputType[] seq = generator.GenerateSequence(Tiles.Length);
 			for (int i = 0; i < Tiles.Length; i++) {
-				SequenceTile tile = CreateRandomTile(tileSize * i);
+				SequenceTile tile = CreateTile(seq[i], tileSize * i);
 				Tiles[i] = tile;
 			}
 			for (int i = 1; i < Tiles.Length - 1; i++) {
@@ -79,7 +83,11 @@ namespace ENJAM2018 {
 		}
 
 		private SequenceTile CreateRandomTile(float distanceFromStart) {
-			SequenceInput input = SequenceInput.GetRandom();
+			return CreateTile(SequenceInput.GetRandomType(), distanceFromStart);
+		}
+
+		private SequenceTile CreateTile(SequenceInputType inputType, float distanceFromStart) {
+			SequenceInput input = inputType.GetSequenceInput();
 			GameObject go = Instantiate(input.prefab, transform);
 			SequenceTile tile = go.GetComponent<SequenceTile>();
 			tile.requiredInput = input;
