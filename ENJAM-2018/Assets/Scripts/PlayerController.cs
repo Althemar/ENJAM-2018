@@ -26,21 +26,28 @@ namespace ENJAM2018
             player = GetComponent<Player>();
 
             string[] names = Input.GetJoystickNames();
-            for (int i = 0; i < names.Length; i++) {
-                
+            if ((int)owner > names.Length - 1) {
+                player.Playing = false;
             }
-            if (names[(int)owner].Contains("Xbox")) {
+            else if (names[(int)owner].Contains("Xbox")) {
                 inputManager = InputManager.Instance.xboxController;
             }
             else if (names[(int)owner].Contains("Wireless Controller")) {
                 inputManager = InputManager.Instance.psMapping;
             }
-            else {
+            else if (names[(int)owner] != "") {
                 inputManager = InputManager.Instance.xboxController;
+            }
+            else {
+                player.Playing = false;
             }
         }
 
         void Update() {
+            if (!player.Playing) {
+                return;
+            }
+
             for (int i = 0; i < inputManager.keyMapping.Count; i++) {
                 int keyId = inputManager.keyMapping[i].JoystickKeyId;
                 if (Input.GetKeyDown("joystick " + playerString + " button " + keyId)) {

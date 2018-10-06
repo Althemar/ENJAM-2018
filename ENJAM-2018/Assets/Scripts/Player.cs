@@ -6,9 +6,9 @@ namespace ENJAM2018
 {
     public class Player : MonoBehaviour
     {
-
         public PlayerScoreUI scoreUI;
 
+        bool playing = true;
         bool moving;
         float moveProgress;
         float moveSpeed;
@@ -30,6 +30,12 @@ namespace ENJAM2018
         {
             get { return lost; }
         }
+
+        public bool Playing
+        {
+            get { return playing; }
+            set { playing = value; }
+        }
         
 
         private void Start() {
@@ -49,7 +55,7 @@ namespace ENJAM2018
 
         void FixedUpdate() {
 
-            if (GameManager.Instance.gameState == GameManager.GameState.ending) {
+            if (!playing || GameManager.Instance.gameState == GameManager.GameState.ending) {
                 return;
             }
 

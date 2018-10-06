@@ -628,7 +628,6 @@ MonoBehaviour:
   mainCamera: {fileID: 141849067}
   tileSize: 2
   speed: 2
-  speedIncreaseDistance: 20
   prefabUp: {fileID: 1455064947962380, guid: c9e352801d6a5874797882754116d8d0, type: 2}
   prefabRight: {fileID: 1455064947962380, guid: 6552ff043a2b1b946a9feddae71d3a1e,
     type: 2}
@@ -645,12 +644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6da57384858d1c48986fed3eee180b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phases:
-  - probDown: 0.25
-    probRight: 0.25
-    probLeft: 0.25
-    probUp: 0.25
-    length: 100
 --- !u!1 &522621525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1379,46 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1430933768}
   m_Script: {fileID: 11500000, guid: e91f437dfc4103e49a8a8a37898c19d2, type: 3}
+--- !u!1 &1407841714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1407841716}
+  - component: {fileID: 1407841715}
+  m_Layer: 0
+  m_Name: ScoreKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1407841715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407841714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cf632ca51df1e49a06e9967e74f1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1407841716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407841714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 497.41116, y: 247.82582, z: -3.8147192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1430933768
 Prefab:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ENJAM2018
 {
@@ -43,8 +44,7 @@ namespace ENJAM2018
 
         public IEnumerator LoadingLeaderboard() {
             yield return new WaitForSeconds(4);
-            // Load leaderboard scene
-
+            SceneManager.LoadScene("LeaderBoard");
         }
 
         

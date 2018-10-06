@@ -10,32 +10,31 @@ public class LeadderBoard : MonoBehaviour {
     // Score Pair ##
     //  - Name
     //  - Score
-    public GameObject scorePair;
-
-    public GameObject[] scores = new GameObject[4];
+    public GameObject scorePairPrefab;
 
 
-    void Start () { 
-        for(int i = 0; i< 4; i++)
+    
+
+    ScoreKeeper scoreKeeper;
+
+
+    void Start () {
+
+        scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+
+
+
+        for(int i = 0; i< scoreKeeper.Scores.Count; i++)
         {
             Vector3 pos = new Vector3(0, -((i)*20), 0);
-            GameObject a = Instantiate(scorePair);
-            a.transform.SetPositionAndRotation(pos, Quaternion.identity);
-            a.transform.SetParent(panel.transform, false);
-            scores[i] = a;
+            GameObject scorePair = Instantiate(scorePairPrefab);
+            scorePair.transform.SetPositionAndRotation(pos, Quaternion.identity);
+            scorePair.transform.SetParent(panel.transform, false);
+
+            scorePair.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Player " + i;
+            scorePair.transform.GetChild(1).gameObject.GetComponent<Text>().text = scoreKeeper.Scores[i].ToString(); ;
         }
-
-        setScores(1, 100);
 	}
-	
-	void Update () {
-   
-    }
 
-    public void setScores(int player, int score)
-    {
-        //GetChild() -> 1 = Score -> GetComponent<Text>
-        Text s = scores[player].transform.GetChild(1).GetComponent<Text>();
-        s.text = score.ToString();
-    }
+    
 }
