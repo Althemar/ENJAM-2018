@@ -7,6 +7,8 @@ namespace ENJAM2018
     public class Player : MonoBehaviour
     {
 
+        public PlayerScoreUI scoreUI;
+
         bool moving;
         float moveProgress;
         float moveSpeed;
@@ -14,17 +16,25 @@ namespace ENJAM2018
         bool lost;
 
         int score;
-        int scoreMultiplicator;
+        int scoreMultiplicator = 1;
         int combo;
         
         PlayersManager playerManager;
+        PlayerController playerController;
+        CameraShake cameraShake;
 
         private SequenceTile tile;
         private LevelSequence level;
+        
 
         private void Start() {
             playerManager = GetComponentInParent<PlayersManager>();
+            playerController = GetComponent<PlayerController>();
             level = GetComponentInParent<LevelSequence>();
+            cameraShake = Camera.main.GetComponent<CameraShake>();
+
+            scoreUI.Player = this;
+            scoreUI.PlayerString = playerController.PlayerString;
 
             tile = level.Tiles[playerManager.beginTile];
             tile.AddPlayerOnTile(this);
@@ -58,6 +68,7 @@ namespace ENJAM2018
             else {
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
+                
             }
             tile.AddPlayerOnTile(this);
         }
@@ -66,15 +77,18 @@ namespace ENJAM2018
             int tilePosition = level.TilePosition(tile);
             int totalTile = level.Tiles.Length;
             if (tilePosition <= totalTile - playerManager.bestTiles) {
-                score += playerManager.basicScore;
+                score += playerManager.basicScore * scoreMultiplicator;
             }
             else {
-                score += playerManager.bestTilesScore * scoreMultiplicator;
+                score += playerManager.bestTilesScore * scoreMultiplicator ;
             }
+            scoreUI.SetScore(score);
             combo++;
-            if (combo > playerManager.comboMax) {
+            scoreUI.SetCombo(combo);
+            if (combo >= playerManager.comboMax) {
                 combo = 0;
                 scoreMultiplicator++;
+                scoreUI.SetMultiplicator(scoreMultiplicator);
             }
         }
 
@@ -85,11 +99,15 @@ namespace ENJAM2018
 
             if (keyId == tile.requiredInput.inputKey && level.TilePosition(tile) < 10) {
                 Move(true);
+                IncreaseScore();
             }
             else if (keyId != tile.requiredInput.inputKey) {
                 Move(false);
+                StartCoroutine(cameraShake.Shake(0.15f, .2f));
                 combo = 0;
-                scoreMultiplicator = 0;
+                scoreMultiplicator = 1;
+                scoreUI.SetCombo(combo);
+                scoreUI.SetMultiplicator(scoreMultiplicator);
             }
         }
 

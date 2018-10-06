@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace ENJAM2018
 {
-    public class InputManager : MonoBehaviour
+    public class ControllerMapping : MonoBehaviour
     {
-
         [System.Serializable]
         public struct KeyMapping
         {
-            public int KeyId;
-            public string KeyCode;
+            public string JoystickKeyName;
+            public int JoystickKeyId;
+            public int KeyCode;
         }
 
         public List<KeyMapping> keyMapping;
 
-        public static InputManager Instance;
+        public static ControllerMapping Instance;
 
         private void Awake() {
             if (Instance == null) {

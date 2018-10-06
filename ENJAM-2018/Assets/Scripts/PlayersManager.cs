@@ -7,6 +7,7 @@ namespace ENJAM2018
 {
     public class PlayersManager : MonoBehaviour
     {
+        public List<Player> players;
         public int beginTile = 4;
 
         [Header("Move variables")]
@@ -24,6 +25,10 @@ namespace ENJAM2018
         [Header("Events")]
         public UnityEvent onRightInput;
         public UnityEvent onWrongInput;
+
+        private void Start() {
+            
+        }
 
     }
 }
