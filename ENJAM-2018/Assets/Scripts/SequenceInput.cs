@@ -30,24 +30,26 @@ namespace ENJAM2018 {
 		public static SequenceInput Left;
 
 		public static void Init(GameObject prefabUp, GameObject prefabRight, GameObject prefabDown, GameObject prefabLeft) {
-			Up = new SequenceInput(prefabUp);
-			Right = new SequenceInput(prefabRight);
-			Down = new SequenceInput(prefabDown);
-			Left = new SequenceInput(prefabLeft);
+			Up = new SequenceInput(prefabUp, 3);
+			Right = new SequenceInput(prefabRight, 1);
+			Down = new SequenceInput(prefabDown, 0);
+			Left = new SequenceInput(prefabLeft, 2);
 		}
 
 		public static SequenceInput GetRandom() {
-            int rand = Random.Range(0, 4);
-			SequenceInput sequenceInput = ((SequenceInputType) rand).GetSequenceInput();
-            sequenceInput.inputKey = rand;
-            return sequenceInput;
+            return ((SequenceInputType) Random.Range(0, 4)).GetSequenceInput();
         }
+
+		public static SequenceInputType GetRandomType() {
+			return (SequenceInputType) Random.Range(0, 4);
+		}
 
         public GameObject prefab;
 		public int inputKey;
 
-		public SequenceInput(GameObject prefab) {
+		public SequenceInput(GameObject prefab, int key) {
 			this.prefab = prefab;
+			this.inputKey = key;
 		}
 
 	}
