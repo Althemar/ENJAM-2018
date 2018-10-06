@@ -8,10 +8,12 @@ public class Player : MonoBehaviour {
     float moveProgress;
     float moveSpeed;
 
-    
+    int score;
+    int scoreMultiplicator;
+    int combo;
 
     CharacterState characterState = CharacterState.Waiting;
-    PlayersManager playerController;
+    PlayersManager playerManager;
 
     enum CharacterState
     {
@@ -20,7 +22,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Start() {
-        playerController = GetComponentInParent<PlayersManager>();
+        playerManager = GetComponentInParent<PlayersManager>();
     }
 
     void Update () {
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour {
         switch (characterState) {
 
             case CharacterState.Waiting :
-                transform.position += Vector3.left * playerController.MovingBackSpeed * Time.deltaTime;
+                transform.position += Vector3.left * playerManager.MovingBackSpeed * Time.deltaTime;
                 break;
 
             case CharacterState.Moving:
@@ -49,21 +51,41 @@ public class Player : MonoBehaviour {
         characterState = CharacterState.Moving;
 
         if (goForward) {
-            moveTarget = transform.position + new Vector3(playerController.DashDistance, 0, 0); // TODO : Get next tile
-            moveSpeed = playerController.DashSpeed;
+            moveTarget = transform.position + new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get next tile
+            moveSpeed = playerManager.DashSpeed;
         }
         else {
-            moveTarget = transform.position - new Vector3(playerController.DashDistance, 0, 0); // TODO : Get previous tile
-            moveSpeed = playerController.MovebackSpeed;
+            moveTarget = transform.position - new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get previous tile
+            moveSpeed = playerManager.MovebackSpeed;
+        }
+    }
+
+    public void IncreaseScore() {
+        // TODO Temp variables
+        int tilePosition = 0;
+        int totalTile = 0;
+        if (tilePosition <= totalTile - playerManager.bestTiles) {
+            score += playerManager.basicScore;
+        }
+        else {
+            score += playerManager.bestTilesScore * scoreMultiplicator;
+        }
+        combo++;
+        if (combo > playerManager.comboMax) {
+            combo = 0;
+            scoreMultiplicator++;
         }
     }
 
     public void CheckInput(int keyId) {
         if (keyId == 0) { // Check input and move forward if right
             Move(true);
+            
         }
         else {
             Move(false);
+            combo = 0;
+            scoreMultiplicator = 0;
         }
     }
 }
