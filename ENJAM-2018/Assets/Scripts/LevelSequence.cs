@@ -18,6 +18,11 @@ namespace ENJAM2018 {
 		private Rect cameraBounds;
 		private float distanceTravelled = 0f;
 
+        public SequenceTile[] Tiles
+        {
+            get { return tiles; }
+        }
+
 		private void Awake() {
 			if (mainCamera == null) {
 				mainCamera = Camera.main;
@@ -84,6 +89,15 @@ namespace ENJAM2018 {
 			go.transform.localPosition = new Vector3(distanceFromStart, 0f);
 			return tile;
 		}
+
+        public int TilePosition(SequenceTile tile) {
+            for (int i = 0; i < tiles.Length; i++) {
+                if (tiles[i] == tile) {
+                    return i;
+                }
+            }
+            return -1;
+        }
 
 	}
 }

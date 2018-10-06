@@ -7,6 +7,7 @@ namespace ENJAM2018
 {
     public class PlayersManager : MonoBehaviour
     {
+        public int beginTile = 4;
 
         [Header("Move variables")]
         public float MovingBackSpeed;

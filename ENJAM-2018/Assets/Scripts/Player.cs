@@ -6,8 +6,6 @@ namespace ENJAM2018
 {
     public class Player : MonoBehaviour
     {
-
-        Vector3 moveTarget;
         float moveProgress;
         float moveSpeed;
 
@@ -19,6 +17,7 @@ namespace ENJAM2018
         PlayersManager playerManager;
 
         private SequenceTile tile;
+        private LevelSequence level;
 
         enum CharacterState
         {
@@ -28,19 +27,21 @@ namespace ENJAM2018
 
         private void Start() {
             playerManager = GetComponentInParent<PlayersManager>();
+            level = GetComponentInParent<LevelSequence>();
+
+            tile = level.Tiles[playerManager.beginTile];
+            float tileX = tile.gameObject.transform.position.x;
+            transform.position = new Vector3(tileX, transform.position.y, transform.position.z);
         }
 
-        void Update() {
+        void FixedUpdate() {
 
             switch (characterState) {
 
-                case CharacterState.Waiting:
-                    transform.position += Vector3.left * playerManager.MovingBackSpeed * Time.deltaTime;
-                    break;
-
                 case CharacterState.Moving:
 
-                    moveProgress += moveSpeed * Time.deltaTime;
+                    moveProgress += moveSpeed * Time.fixedDeltaTime;
+                    Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x, transform.position.y, transform.position.z);
                     transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
 
                     if (moveProgress >= 1) {
@@ -56,19 +57,18 @@ namespace ENJAM2018
             characterState = CharacterState.Moving;
 
             if (goForward) {
-                moveTarget = transform.position + new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get next tile
+                tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
             }
             else {
-                moveTarget = transform.position - new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get previous tile
+                tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
             }
         }
 
         public void IncreaseScore() {
-            // TODO Temp variables
-            int tilePosition = 0;
-            int totalTile = 0;
+            int tilePosition = level.TilePosition(tile);
+            int totalTile = level.Tiles.Length;
             if (tilePosition <= totalTile - playerManager.bestTiles) {
                 score += playerManager.basicScore;
             }
