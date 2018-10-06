@@ -6,9 +6,9 @@ namespace ENJAM2018
 {
     public class Player : MonoBehaviour
     {
-
         public PlayerScoreUI scoreUI;
 
+        bool playing = true;
         bool moving;
         float moveProgress;
         float moveSpeed;
@@ -25,6 +25,23 @@ namespace ENJAM2018
 
         private SequenceTile tile;
         private LevelSequence level;
+
+        public bool Lost
+        {
+            get { return lost; }
+        }
+
+        public bool Playing
+        {
+            get { return playing; }
+            set { playing = value; }
+        }
+
+        public int Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
         
 
         private void Start() {
@@ -44,9 +61,14 @@ namespace ENJAM2018
 
         void FixedUpdate() {
 
+            if (!playing || GameManager.Instance.GameState == GameManager.GameStates.ending) {
+                return;
+            }
+
             if (moving) {
                 moveProgress += moveSpeed * Time.fixedDeltaTime;
                 Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x, transform.position.y, transform.position.z);
+
                 transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
 
                 if (moveProgress >= 1) {
@@ -86,6 +108,8 @@ namespace ENJAM2018
             combo++;
             scoreUI.SetCombo(combo);
             if (combo >= playerManager.comboMax) {
+                StartCoroutine(cameraShake.Shake(0.15f, .3f));
+
                 combo = 0;
                 scoreMultiplicator++;
                 scoreUI.SetMultiplicator(scoreMultiplicator);
@@ -103,7 +127,6 @@ namespace ENJAM2018
             }
             else if (keyId != tile.requiredInput.inputKey) {
                 Move(false);
-                StartCoroutine(cameraShake.Shake(0.15f, .2f));
                 combo = 0;
                 scoreMultiplicator = 1;
                 scoreUI.SetCombo(combo);
@@ -113,6 +136,7 @@ namespace ENJAM2018
 
         public void Lose() {
             lost = true;
+            GameManager.Instance.EndGame();
         }
 
     }

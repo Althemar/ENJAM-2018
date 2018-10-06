@@ -7,6 +7,8 @@ namespace ENJAM2018
 {
     public class PlayersManager : MonoBehaviour
     {
+        public static PlayersManager Instance;
+
         public List<Player> players;
         public int beginTile = 4;
 
@@ -26,8 +28,10 @@ namespace ENJAM2018
         public UnityEvent onRightInput;
         public UnityEvent onWrongInput;
 
-        private void Start() {
-            
+        private void Awake() {
+            if (Instance == null) {
+                Instance = this;
+            }
         }
 
     }

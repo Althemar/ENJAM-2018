@@ -7,7 +7,7 @@ namespace ENJAM2018
     public class PlayerController : MonoBehaviour
     {
         
-        enum Players { Player1, Player2, Player3, Player4 }
+        public enum Players { Player1, Player2, Player3, Player4 }
 
         [SerializeField] Players owner;
         Player player;
@@ -19,6 +19,11 @@ namespace ENJAM2018
             get { return playerString; }
         }
 
+        public Players Owner
+        {
+            get { return owner; }
+            set { owner = value; }
+        }
 
         void Start() {
             
@@ -26,18 +31,30 @@ namespace ENJAM2018
             player = GetComponent<Player>();
 
             string[] names = Input.GetJoystickNames();
-            if (names[(int)owner].Contains("Xbox")) {
+            if ((int)owner > names.Length - 1) {
+                player.Playing = false;
+            }
+            else if (names[(int)owner].Contains("Xbox")) {
                 inputManager = InputManager.Instance.xboxController;
             }
             else if (names[(int)owner].Contains("Wireless Controller")) {
                 inputManager = InputManager.Instance.psMapping;
             }
-            else {
+            else if (names[(int)owner] != "") {
                 inputManager = InputManager.Instance.xboxController;
+            }
+            else {
+                player.Playing = false;
             }
         }
 
+        
+
         void Update() {
+            if (!player.Playing) {
+                return;
+            }
+
             for (int i = 0; i < inputManager.keyMapping.Count; i++) {
                 int keyId = inputManager.keyMapping[i].JoystickKeyId;
                 if (Input.GetKeyDown("joystick " + playerString + " button " + keyId)) {
