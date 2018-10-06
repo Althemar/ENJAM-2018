@@ -7,6 +7,7 @@ namespace ENJAM2018 {
 		[SerializeField] private Camera mainCamera;
 		[SerializeField] private float tileSize = 2f;
 		[SerializeField] private float speed = 2f;
+		[SerializeField] private float acceleration = .5f;
 		[Header("Temporary")]
 		[SerializeField] private GameObject prefabUp;
 		[SerializeField] private GameObject prefabRight;
@@ -16,7 +17,6 @@ namespace ENJAM2018 {
 		private SequenceTile[] tiles;
 		private Rect cameraBounds;
 		private float distanceTravelled = 0f;
-		private float lastGenDistance = 0f;
 
 		private void Awake() {
 			if (mainCamera == null) {
@@ -37,11 +37,13 @@ namespace ENJAM2018 {
 		}
 
 		private void FixedUpdate() {
+			speed += acceleration * Time.fixedDeltaTime;
 			float distance = speed * Time.fixedDeltaTime;
 			transform.position -= Vector3.right * distance;
 			distanceTravelled += distance;
-			if (distanceTravelled - lastGenDistance > 2f) {
-				lastGenDistance = distanceTravelled;
+			int tilesOutCount = (int) ((cameraBounds.xMax - tiles[tiles.Length - 1].transform.position.x + tileSize / 2f) / tileSize);
+			Debug.Log(tilesOutCount);
+			for (int i = 0; i < tilesOutCount; i++) {
 				DeleteLeftTile();
 				GenerateRightTile();
 			}
