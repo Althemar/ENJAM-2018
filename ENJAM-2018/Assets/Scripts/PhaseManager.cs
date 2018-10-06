@@ -9,6 +9,7 @@ namespace ENJAM2018 {
 			public float probRight;		// B
 			public float probLeft;      // X
 			public float probUp;        // Y
+			public float probDouble;
 			public float length;
 			public float startSpeed;
 			public float endSpeed;
