@@ -1,91 +1,99 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ENJAM2018;
 
-public class Player : MonoBehaviour {
-
-    Vector3 moveTarget;
-    float moveProgress;
-    float moveSpeed;
-
-    int score;
-    int scoreMultiplicator;
-    int combo;
-
-    CharacterState characterState = CharacterState.Waiting;
-    PlayersManager playerManager;
-
-    enum CharacterState
+namespace ENJAM2018
+{
+    public class Player : MonoBehaviour
     {
-        Waiting,
-        Moving
-    }
 
-    private void Start() {
-        playerManager = GetComponentInParent<PlayersManager>();
-    }
+        Vector3 moveTarget;
+        float moveProgress;
+        float moveSpeed;
 
-    void Update () {
+        int score;
+        int scoreMultiplicator;
+        int combo;
 
-        switch (characterState) {
+        CharacterState characterState = CharacterState.Waiting;
+        PlayersManager playerManager;
 
-            case CharacterState.Waiting :
-                transform.position += Vector3.left * playerManager.MovingBackSpeed * Time.deltaTime;
-                break;
+        private SequenceTile tile;
 
-            case CharacterState.Moving:
-
-                moveProgress += moveSpeed * Time.deltaTime;
-                transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
-
-                if (moveProgress >= 1) {
-                    characterState = CharacterState.Waiting;
-                    moveProgress = 0;
-                }
-                break;
-        } 
-    }
-
-    public void Move(bool goForward) {
-        moveProgress = 0;
-        characterState = CharacterState.Moving;
-
-        if (goForward) {
-            moveTarget = transform.position + new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get next tile
-            moveSpeed = playerManager.DashSpeed;
+        enum CharacterState
+        {
+            Waiting,
+            Moving
         }
-        else {
-            moveTarget = transform.position - new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get previous tile
-            moveSpeed = playerManager.MovebackSpeed;
-        }
-    }
 
-    public void IncreaseScore() {
-        // TODO Temp variables
-        int tilePosition = 0;
-        int totalTile = 0;
-        if (tilePosition <= totalTile - playerManager.bestTiles) {
-            score += playerManager.basicScore;
+        private void Start() {
+            playerManager = GetComponentInParent<PlayersManager>();
         }
-        else {
-            score += playerManager.bestTilesScore * scoreMultiplicator;
-        }
-        combo++;
-        if (combo > playerManager.comboMax) {
-            combo = 0;
-            scoreMultiplicator++;
-        }
-    }
 
-    public void CheckInput(int keyId) {
-        if (keyId == 0) { // Check input and move forward if right
-            Move(true);
-            
+        void Update() {
+
+            switch (characterState) {
+
+                case CharacterState.Waiting:
+                    transform.position += Vector3.left * playerManager.MovingBackSpeed * Time.deltaTime;
+                    break;
+
+                case CharacterState.Moving:
+
+                    moveProgress += moveSpeed * Time.deltaTime;
+                    transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
+
+                    if (moveProgress >= 1) {
+                        characterState = CharacterState.Waiting;
+                        moveProgress = 0;
+                    }
+                    break;
+            }
         }
-        else {
-            Move(false);
-            combo = 0;
-            scoreMultiplicator = 0;
+
+        public void Move(bool goForward) {
+            moveProgress = 0;
+            characterState = CharacterState.Moving;
+
+            if (goForward) {
+                moveTarget = transform.position + new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get next tile
+                moveSpeed = playerManager.DashSpeed;
+            }
+            else {
+                moveTarget = transform.position - new Vector3(playerManager.DashDistance, 0, 0); // TODO : Get previous tile
+                moveSpeed = playerManager.MovebackSpeed;
+            }
         }
+
+        public void IncreaseScore() {
+            // TODO Temp variables
+            int tilePosition = 0;
+            int totalTile = 0;
+            if (tilePosition <= totalTile - playerManager.bestTiles) {
+                score += playerManager.basicScore;
+            }
+            else {
+                score += playerManager.bestTilesScore * scoreMultiplicator;
+            }
+            combo++;
+            if (combo > playerManager.comboMax) {
+                combo = 0;
+                scoreMultiplicator++;
+            }
+        }
+
+        public void CheckInput(int keyId) {
+            if (keyId == 0) { // Check input and move forward if right
+                Move(true);
+
+            }
+            else {
+                Move(false);
+                combo = 0;
+                scoreMultiplicator = 0;
+            }
+        }
+
     }
 }
