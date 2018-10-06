@@ -14,8 +14,9 @@ public class ReadyPlayers : MonoBehaviour {
 
     private GameObject[] insertedCharacters = new GameObject[4];
 
-
     public bool[] selectedCharacters = new bool[4];
+
+    public string scene;
 
     public enum Players : int {
         Player1 = 0,
@@ -80,6 +81,22 @@ public class ReadyPlayers : MonoBehaviour {
 
         return -1;
     }
+
+    int totalSelectedPlayers()
+    {
+        int players = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            if (selectedCharacters[i] == true) players++;
+        }
+        return players;
+    }
+
+    void ChangeScene(string s)
+    { 
+        DontDestroyOnLoad(gameObject);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(s);
+    }
 	
 	void Update () {
 
@@ -92,7 +109,7 @@ public class ReadyPlayers : MonoBehaviour {
 
                 int player = nextPlayer();
 
-                if (player != -1)
+                if (player != -1 && selectedCharacters[i] == false)
                 {
                     Vector3 pos = new Vector3(0, 0, 0);
                     GameObject a = Instantiate(charactersPrefabs[player]);
@@ -104,6 +121,11 @@ public class ReadyPlayers : MonoBehaviour {
 
                     insertedCharacters[i] = a;
                     selectedCharacters[i] = true;
+                }
+
+                if(selectedCharacters[i] == true && totalSelectedPlayers() > 1)
+                {
+                    ChangeScene(scene);
                 }
             }
 
