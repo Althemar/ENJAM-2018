@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
+using UnityEditor.Animations;
 
 namespace ENJAM2018
 {
@@ -9,6 +11,8 @@ namespace ENJAM2018
         public static GameManager Instance;
 
         public ScoreKeeper scoreKeeper;
+
+        public AnimatorController testAnimator;
 
 
         public int NumberOfPlayers;
@@ -64,13 +68,18 @@ namespace ENJAM2018
 
                 player.GetComponent<PlayerController>().Owner = (PlayerController.Players)playerId;
                 playerId++;
-                player.scoreUI = UIManager.Instance.CreatePlayerScoreUI(PlayerScoreUIPrefab);         
+                player.scoreUI = UIManager.Instance.CreatePlayerScoreUI(PlayerScoreUIPrefab);
+
+                Animator animator = player.GetComponent<Animator>();
+                animator.runtimeAnimatorController = (RuntimeAnimatorController)testAnimator;
+
+                PlayersManager.Instance.Players.Add(player);
             }
         }
 
         public void EndGame() {
-            for (int i = 0; i < PlayersManager.Instance.players.Count; i++) {
-                if (!PlayersManager.Instance.players[i].Lost) {
+            for (int i = 0; i < PlayersManager.Instance.Players.Count; i++) {
+                if (!PlayersManager.Instance.Players[i].Lost) {
                     return;
                 }
             }

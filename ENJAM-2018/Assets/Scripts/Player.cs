@@ -22,11 +22,14 @@ namespace ENJAM2018
         PlayersManager playerManager;
         PlayerController playerController;
         CameraShake cameraShake;
+        Animator animator;
 
         private SequenceTile tile;
         private LevelSequence level;
+		private ParticleSystem particleSystemDash;
+		private ParticleSystem particleSystemFail;
 
-        public bool Lost
+		public bool Lost
         {
             get { return lost; }
         }
@@ -43,12 +46,18 @@ namespace ENJAM2018
             set { score = value; }
         }
         
-
         private void Start() {
+			particleSystemDash = transform.Find("ParticlesDash").GetComponent<ParticleSystem>();
+			particleSystemFail = transform.Find("ParticlesFail").GetComponent<ParticleSystem>();
+			ParticleSystem.MainModule mainMod = particleSystemDash.main;
+			mainMod.simulationSpace = ParticleSystemSimulationSpace.Custom;
+			mainMod.customSimulationSpace = transform.parent;
+
             playerManager = GetComponentInParent<PlayersManager>();
             playerController = GetComponent<PlayerController>();
             level = GetComponentInParent<LevelSequence>();
             cameraShake = Camera.main.GetComponent<CameraShake>();
+            animator = GetComponent<Animator>();
 
             scoreUI.Player = this;
             scoreUI.PlayerString = playerController.PlayerString;
@@ -59,8 +68,21 @@ namespace ENJAM2018
             transform.position = new Vector3(tileX, transform.position.y, transform.position.z);
         }
 
-        void FixedUpdate() {
+		private void Update() {
+			if (Input.GetKeyDown(KeyCode.A)) {
+				Move(true);
+				IncreaseScore();
+			}
+		}
 
+		void FixedUpdate() {
+			ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystemDash.particleCount];
+			particleSystemDash.GetParticles(particles);
+			for (int i = 0; i < particles.Length; i++) {
+				particles[i].position = transform.localPosition;
+			}
+			particleSystemDash.SetParticles(particles, particles.Length);
+			
             if (!playing || GameManager.Instance.GameState == GameManager.GameStates.ending) {
                 return;
             }
@@ -73,6 +95,7 @@ namespace ENJAM2018
 
                 if (moveProgress >= 1) {
                     moving = false;
+                    animator.SetBool("Is Moving", false);
                     moveProgress = 0;
                 }
             }
@@ -80,17 +103,19 @@ namespace ENJAM2018
 
         public void Move(bool goForward) {
             moveProgress = 0;
+            animator.SetBool("Is Moving", true);
             moving = true;
 
             tile.RemovePlayerFromTile(this);
             if (goForward) {
                 tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
+				particleSystemDash.Emit(1);
             }
             else {
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
-                
+				particleSystemFail.Play();
             }
             tile.AddPlayerOnTile(this);
         }
@@ -121,11 +146,11 @@ namespace ENJAM2018
                 return;
             }
 
-            if (keyId == tile.requiredInput.inputKey && level.TilePosition(tile) < 10) {
+            if (keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
                 Move(true);
                 IncreaseScore();
             }
-            else if (keyId != tile.requiredInput.inputKey) {
+            else if (keyId != tile.next.requiredInput.inputKey) {
                 Move(false);
                 combo = 0;
                 scoreMultiplicator = 1;

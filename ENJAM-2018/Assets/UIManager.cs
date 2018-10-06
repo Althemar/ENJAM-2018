@@ -18,6 +18,8 @@ namespace ENJAM2018
         int numberOfPlayerUI = 0;
         public int spaceBetweenPlayerUI = 200;
 
+        RectTransform rectTransform;
+
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
@@ -25,6 +27,8 @@ namespace ENJAM2018
             else {
                 Destroy(gameObject);
             }
+            rectTransform = GetComponent<RectTransform>();
+
         }
 
         private void Start() {
@@ -37,6 +41,10 @@ namespace ENJAM2018
 
         public PlayerScoreUI CreatePlayerScoreUI(GameObject scorePrefab) {
             PlayerScoreUI playerScoreUI = Instantiate(scorePrefab, playerScoresParents.transform).GetComponent<PlayerScoreUI>();
+         
+
+            playerScoreUI.GetComponent<RectTransform>().localPosition = new Vector3(numberOfPlayerUI * spaceBetweenPlayerUI, 0, 0);
+            numberOfPlayerUI++;
             return playerScoreUI;
         }
     }
