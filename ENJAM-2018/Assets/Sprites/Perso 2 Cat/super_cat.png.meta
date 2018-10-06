@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 5d59ed50153668b46ae23267643285ba
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: super_cat_0
+    21300002: super_cat_1
+    21300004: super_cat_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -82,7 +85,67 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: super_cat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 568
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6070f6aeb452596469be171971f73fb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_cat_1
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 46
+        width: 490
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed84d1c49e9d144c96ba407719dcbff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: super_cat_2
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 0
+        width: 491
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f67cf15272535428994b7b1aebc1c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
