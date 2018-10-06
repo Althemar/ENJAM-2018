@@ -56,6 +56,7 @@ MonoBehaviour:
     probRight: 0.5
     probLeft: 0
     probUp: 0
+    probDouble: 0
     length: 20
     startSpeed: 1.5
     endSpeed: 2.5
@@ -63,6 +64,7 @@ MonoBehaviour:
     probRight: 0.425
     probLeft: 0.15
     probUp: 0
+    probDouble: 0.05
     length: 20
     startSpeed: 2.5
     endSpeed: 3.5
@@ -70,6 +72,7 @@ MonoBehaviour:
     probRight: 0.33
     probLeft: 0.34
     probUp: 0
+    probDouble: 0.08
     length: 20
     startSpeed: 3.5
     endSpeed: 4.5
@@ -77,6 +80,7 @@ MonoBehaviour:
     probRight: 0.3
     probLeft: 0.3
     probUp: 0.1
+    probDouble: 0.1
     length: 20
     startSpeed: 4.5
     endSpeed: 5
@@ -84,6 +88,7 @@ MonoBehaviour:
     probRight: 0.3
     probLeft: 0.2
     probUp: 0.2
+    probDouble: 0.1
     length: 20
     startSpeed: 5
     endSpeed: 6
