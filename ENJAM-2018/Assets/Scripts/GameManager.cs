@@ -29,7 +29,6 @@ namespace ENJAM2018
         }
 
         public void EndGame() {
-            gameState = GameState.ending;
             
             // Return if not all players have lost
             for (int i = 0; i < playersManager.players.Count; i++) {
@@ -37,6 +36,7 @@ namespace ENJAM2018
                     return;
                 }
             }
+            gameState = GameState.ending;
 
             UIManager.Instance.DisplayEndingText();
         }

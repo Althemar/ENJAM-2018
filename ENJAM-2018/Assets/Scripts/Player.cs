@@ -49,7 +49,7 @@ namespace ENJAM2018
 
         void FixedUpdate() {
 
-            if (GameManager.Instance.gameState != GameManager.GameState.ending) {
+            if (GameManager.Instance.gameState == GameManager.GameState.ending) {
                 return;
             }
 

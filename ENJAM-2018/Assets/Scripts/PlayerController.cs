@@ -26,6 +26,9 @@ namespace ENJAM2018
             player = GetComponent<Player>();
 
             string[] names = Input.GetJoystickNames();
+            for (int i = 0; i < names.Length; i++) {
+                
+            }
             if (names[(int)owner].Contains("Xbox")) {
                 inputManager = InputManager.Instance.xboxController;
             }
