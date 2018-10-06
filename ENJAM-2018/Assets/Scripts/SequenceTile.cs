@@ -5,10 +5,9 @@ using UnityEngine;
 namespace ENJAM2018 {
 	public class SequenceTile : MonoBehaviour {
 
-		[NonSerialized]
-		public SequenceInput requiredInput;
-		public SequenceTile previous;
-		public SequenceTile next;
+		[NonSerialized] public SequenceInput requiredInput;
+		[NonSerialized] public SequenceTile previous;
+		[NonSerialized] public SequenceTile next;
 
         List<Player> playersOnTile;
 

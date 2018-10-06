@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ENJAM2018;
 
 namespace ENJAM2018
 {

@@ -7,6 +7,8 @@ namespace ENJAM2018 {
 		[SerializeField] private Camera mainCamera;
 		[SerializeField] private float tileSize = 2f;
 		[SerializeField] private float speed = 2f;
+		[Tooltip("The distance needed to increase the speed by one")]
+		[SerializeField] private float speedIncreaseDistance = 20f;
 		[Header("Temporary")]
 		[SerializeField] private GameObject prefabUp;
 		[SerializeField] private GameObject prefabRight;
@@ -16,7 +18,6 @@ namespace ENJAM2018 {
 		private SequenceTile[] tiles;
 		private Rect cameraBounds;
 		private float distanceTravelled = 0f;
-		private float lastGenDistance = 0f;
 
         public SequenceTile[] Tiles
         {
@@ -29,27 +30,26 @@ namespace ENJAM2018 {
 			}
 			float vertExtent = mainCamera.orthographicSize;
 			float horizExtent = vertExtent * (Screen.width / (float) Screen.height);
-			Debug.Log("horizExt " + horizExtent);
 			cameraBounds = new Rect(-horizExtent, -vertExtent, horizExtent * 2, vertExtent * 2);
-			Debug.Log(cameraBounds.xMin);
-			Debug.Log(cameraBounds.yMin);
 			tiles = new SequenceTile[(int) (cameraBounds.width / tileSize) + 2];
 			SequenceInput.Init(prefabUp, prefabRight, prefabDown, prefabLeft);
+
+			GenerateAllTiles();
 		}
 
 		private void Start() {
 			// Place level origin at left of screen
 			transform.position = new Vector3(cameraBounds.xMin + tileSize / 2f, 0f);
 
-			GenerateAllTiles();
 		}
-
+		
 		private void FixedUpdate() {
+			speed += 1f / speedIncreaseDistance * Time.fixedDeltaTime;
 			float distance = speed * Time.fixedDeltaTime;
 			transform.position -= Vector3.right * distance;
 			distanceTravelled += distance;
-			if (distanceTravelled - lastGenDistance > 2f) {
-				lastGenDistance = distanceTravelled;
+			int tilesOutCount = (int) ((cameraBounds.xMax - tiles[tiles.Length - 1].transform.position.x + tileSize / 2f) / tileSize);
+			for (int i = 0; i < tilesOutCount; i++) {
 				DeleteLeftTile();
 				GenerateRightTile();
 			}
