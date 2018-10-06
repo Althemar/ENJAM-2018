@@ -5,26 +5,13 @@ namespace ENJAM2018 {
 
 		public const int PREVIOUS_BUFFER_SIZE = 3;
 
-		[System.Serializable]
-		public struct Phase {
-			public float probDown;		// A
-			public float probRight;		// B
-			public float probLeft;		// X
-			public float probUp;		// Y
-			public int length;
-		}
-
-		public Phase[] phases;
-		public Phase phase { get; private set; }
-		private int phaseIndex = 0;
 		private SequenceInputType[] previous;
 		private int sequenceIndex = 0;
-		private int nextPhaseChange;
+		private PhaseManager phaseManager;
 
 		public void Init() {
+			phaseManager = PhaseManager.I;
 			previous = new SequenceInputType[PREVIOUS_BUFFER_SIZE];
-			phase = phases[phaseIndex];
-			nextPhaseChange = phase.length;
 		}
 
 		public SequenceInputType[] GenerateSequence(int count) {
@@ -36,17 +23,13 @@ namespace ENJAM2018 {
 		}
 
 		public SequenceInputType GenerateNext() {
-			if (sequenceIndex > nextPhaseChange && phaseIndex < phases.Length - 1) {
-				phase = phases[++phaseIndex];
-				nextPhaseChange = sequenceIndex + phase.length;
-			}
 			float rnd = Random.value;
 			SequenceInputType inputType;
-			if (rnd < phase.probDown) {
+			if (rnd < phaseManager.currentPhase.probDown) {
 				inputType = SequenceInputType.Down;
-			} else if (rnd < phase.probDown + phase.probRight) {
+			} else if (rnd < phaseManager.currentPhase.probDown + phaseManager.currentPhase.probRight) {
 				inputType = SequenceInputType.Right;
-			} else if (rnd < phase.probDown + phase.probRight + phase.probLeft) {
+			} else if (rnd < phaseManager.currentPhase.probDown + phaseManager.currentPhase.probRight + phaseManager.currentPhase.probLeft) {
 				inputType = SequenceInputType.Left;
 			} else {
 				inputType = SequenceInputType.Up;

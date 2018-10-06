@@ -8,8 +8,6 @@ namespace ENJAM2018 {
 		[SerializeField] private Camera mainCamera;
 		[SerializeField] private float tileSize = 2f;
 		[SerializeField] private float speed = 2f;
-		[Tooltip("The distance needed to increase the speed by one")]
-		[SerializeField] private float speedIncreaseDistance = 20f;
 		[Header("Temporary")]
 		[SerializeField] private GameObject prefabUp;
 		[SerializeField] private GameObject prefabRight;
@@ -20,8 +18,10 @@ namespace ENJAM2018 {
 		private Rect cameraBounds;
 		public float distanceTravelled { get; private set; }
 		private SequenceGenerator generator;
+		private PhaseManager phaseManager;
 
 		private void Awake() {
+			phaseManager = PhaseManager.I;
 			generator = GetComponent<SequenceGenerator>();
 			generator.Init();
 			if (mainCamera == null) {
@@ -43,7 +43,7 @@ namespace ENJAM2018 {
 		}
 		
 		private void FixedUpdate() {
-			speed += 1f / speedIncreaseDistance * Time.fixedDeltaTime;
+			speed = Mathf.Lerp(phaseManager.currentPhase.startSpeed, phaseManager.currentPhase.endSpeed, phaseManager.PhaseProgress);
 			transform.position -= Vector3.right * speed * Time.fixedDeltaTime;
 			distanceTravelled = -transform.position.x - cameraBounds.width / 2f + tileSize / 2f;
 
