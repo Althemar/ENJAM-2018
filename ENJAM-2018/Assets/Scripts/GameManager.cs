@@ -2,26 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
-
-    public static GameManager Instance;
-
-    enum GameState
+namespace ENJAM2018
+{
+    public class GameManager : MonoBehaviour
     {
-        playing,
-        
-    }
+        public static GameManager Instance;
 
-    private void Awake() {
-        if (Instance == null) {
-            Instance = this;
-        }
-        else {
-            Destroy(gameObject);
-        }
-    }
+        PlayersManager playersManager;
 
-    private void Start() {
+        public enum GameState
+        {
+            beginning,
+            playing,
+            ending
+        }
+
+        public GameState gameState = GameState.playing;
+
+        private void Awake() {
+            if (Instance == null) {
+                Instance = this;
+            }
+            else {
+                Destroy(gameObject);
+            }
+        }
+
+        public void EndGame() {
+            gameState = GameState.ending;
+            
+            // Return if not all players have lost
+            for (int i = 0; i < playersManager.players.Count; i++) {
+                if (!playersManager.players[i].Lost) {
+                    return;
+                }
+            }
+
+            UIManager.Instance.DisplayEndingText();
+        }
+
+        public IEnumerator LoadingLeaderboard() {
+            yield return new WaitForSeconds(4);
+            // Load leaderboard scene
+
+        }
+
         
     }
 }
+

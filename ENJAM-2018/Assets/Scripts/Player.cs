@@ -25,6 +25,11 @@ namespace ENJAM2018
 
         private SequenceTile tile;
         private LevelSequence level;
+
+        public bool Lost
+        {
+            get { return lost; }
+        }
         
 
         private void Start() {
@@ -43,6 +48,10 @@ namespace ENJAM2018
         }
 
         void FixedUpdate() {
+
+            if (GameManager.Instance.gameState != GameManager.GameState.ending) {
+                return;
+            }
 
             if (moving) {
                 moveProgress += moveSpeed * Time.fixedDeltaTime;
@@ -86,6 +95,8 @@ namespace ENJAM2018
             combo++;
             scoreUI.SetCombo(combo);
             if (combo >= playerManager.comboMax) {
+                StartCoroutine(cameraShake.Shake(0.15f, .3f));
+
                 combo = 0;
                 scoreMultiplicator++;
                 scoreUI.SetMultiplicator(scoreMultiplicator);
@@ -103,7 +114,6 @@ namespace ENJAM2018
             }
             else if (keyId != tile.requiredInput.inputKey) {
                 Move(false);
-                StartCoroutine(cameraShake.Shake(0.15f, .2f));
                 combo = 0;
                 scoreMultiplicator = 1;
                 scoreUI.SetCombo(combo);
@@ -113,6 +123,7 @@ namespace ENJAM2018
 
         public void Lose() {
             lost = true;
+            GameManager.Instance.EndGame();
         }
 
     }

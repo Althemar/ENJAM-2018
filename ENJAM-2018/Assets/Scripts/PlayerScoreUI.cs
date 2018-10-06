@@ -11,6 +11,7 @@ namespace ENJAM2018
         public Text scoreText;
         public Text multiplicatorText;
         public Text comboText;
+        public Image comboFillingImage;
 
         Player player;
         string playerString;
@@ -34,9 +35,11 @@ namespace ENJAM2018
         public void SetMultiplicator(int multiplicator) {
             multiplicatorText.text = " x " + multiplicator.ToString();
         }
+        
 
         public void SetCombo(int combo) {
             comboText.text = "Combo : " + combo.ToString();
+            comboFillingImage.fillAmount = combo / 10f;
         }
 
     }
