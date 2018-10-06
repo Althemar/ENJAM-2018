@@ -10,14 +10,18 @@ public class PlayerController : MonoBehaviour {
     Player player;
     string playerString;
     
+    
 	void Start () {
         playerString = ((int) owner + 1).ToString();
         player = GetComponent<Player>(); 
 	}
 	
 	void Update () {
-        if (Input.GetKeyDown("f" + playerString)) { 
-            player.MoveForward();
+        for (int i = 0; i < InputManager.Instance.keyMapping.Count; i++) {
+            int keyId = InputManager.Instance.keyMapping[i].KeyId;
+            if (Input.GetKeyDown("joystick " + playerString + " button " + keyId)) {
+                player.CheckInput(keyId);
+            }
         }
     }
 }

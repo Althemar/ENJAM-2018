@@ -1,20 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class PlayersManager : MonoBehaviour {
 
     public float MovingBackSpeed;
     public float DashSpeed;
     public float DashDistance;
+    public float MovebackSpeed;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public UnityEvent onRightInput;
+    public UnityEvent onWrongInput;
+
 }

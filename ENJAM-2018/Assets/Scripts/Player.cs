@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    Vector3 dashTarget;
-    float dashProgress;
+    Vector3 moveTarget;
+    float moveProgress;
+    float moveSpeed;
+
+    
 
     CharacterState characterState = CharacterState.Waiting;
     PlayersManager playerController;
@@ -13,7 +16,7 @@ public class Player : MonoBehaviour {
     enum CharacterState
     {
         Waiting,
-        MovingForward
+        Moving
     }
 
     private void Start() {
@@ -28,22 +31,39 @@ public class Player : MonoBehaviour {
                 transform.position += Vector3.left * playerController.MovingBackSpeed * Time.deltaTime;
                 break;
 
-            case CharacterState.MovingForward:
+            case CharacterState.Moving:
 
-                dashProgress += playerController.DashSpeed * Time.deltaTime;
-                transform.position = Vector3.Lerp(transform.position, dashTarget, dashProgress);
+                moveProgress += moveSpeed * Time.deltaTime;
+                transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
 
-                if (dashProgress >= 1) {
+                if (moveProgress >= 1) {
                     characterState = CharacterState.Waiting;
-                    dashProgress = 0;
+                    moveProgress = 0;
                 }
                 break;
         } 
     }
 
-    public void MoveForward() {
-        dashProgress = 0;
-        dashTarget = transform.position + new Vector3(playerController.DashDistance, 0, 0);
-        characterState = CharacterState.MovingForward;
+    public void Move(bool goForward) {
+        moveProgress = 0;
+        characterState = CharacterState.Moving;
+
+        if (goForward) {
+            moveTarget = transform.position + new Vector3(playerController.DashDistance, 0, 0); // TODO : Get next tile
+            moveSpeed = playerController.DashSpeed;
+        }
+        else {
+            moveTarget = transform.position - new Vector3(playerController.DashDistance, 0, 0); // TODO : Get previous tile
+            moveSpeed = playerController.MovebackSpeed;
+        }
+    }
+
+    public void CheckInput(int keyId) {
+        if (keyId == 0) { // Check input and move forward if right
+            Move(true);
+        }
+        else {
+            Move(false);
+        }
     }
 }
