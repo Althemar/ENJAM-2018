@@ -93,8 +93,8 @@ public class ReadyPlayers : MonoBehaviour {
     }
 
     void ChangeScene(string s)
-    {
-        //DontDestroyOnLoad();
+    { 
+        DontDestroyOnLoad(gameObject);
         UnityEngine.SceneManagement.SceneManager.LoadScene(s);
     }
 	
