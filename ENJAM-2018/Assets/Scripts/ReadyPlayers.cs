@@ -12,11 +12,16 @@ public class ReadyPlayers : MonoBehaviour {
     public GameObject[] panels = new GameObject[4];
     public GameObject[] charactersPrefabs = new GameObject[4];
 
+    private GameObject[] insertedCharacters = new GameObject[4];
+
+
+    public bool[] selectedCharacters = new bool[4];
+
     public enum Players : int {
-        Player1 = 1,
-        Player2 = 2,
-        Player3 = 3,
-        Player4 = 4
+        Player1 = 0,
+        Player2 = 1,
+        Player3 = 2,
+        Player4 = 3
     }
 
 
@@ -29,13 +34,13 @@ public class ReadyPlayers : MonoBehaviour {
 
     public int GetRandomPlayer()
     {
-        return Random.Range(1, 5);
+        return Random.Range(0, 4);
     }
 
     void Start () {
-        for (int i = 1; i <= 4; i++)
+        for (int i = 0; i < 4; i++)
         {
-            Image img = panels[i - 1].GetComponent<Image>();
+            Image img = panels[i].GetComponent<Image>();
             img.color = UnityEngine.Color.grey;
         }
 
@@ -55,32 +60,61 @@ public class ReadyPlayers : MonoBehaviour {
             inputManager = InputManager.Instance.xboxController;
         }
     }
+
+    int nextPlayer()
+    {
+        int randomPlayerPrefab = GetRandomPlayer();
+
+        if (selectedCharacters[randomPlayerPrefab] == false)
+        {
+            return randomPlayerPrefab;
+        }
+
+        for (int i = 0; i<4; i++)
+        {
+            if (selectedCharacters[i] == false)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 	
 	void Update () {
+
         //Tester touts les jouers
-        
-        for (int i = 1; i <= 4; i++)
+        for (int i = 0; i < 4; i++)
         {
-            if (Input.GetKeyDown("joystick " + i + " button " + validationButton))
+            if (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + validationButton))
             {
                 //If A Acccept, If B Debug.Log("Joueur A " + i);
-                int randomPlayerPrefab = GetRandomPlayer();
 
-                Vector3 pos = new Vector3(0, 0, 0);
-                GameObject a = Instantiate(charactersPrefabs[i - 1]);
-                a.transform.SetPositionAndRotation(pos, Quaternion.identity);
-                a.transform.SetParent(panels[i - 1].transform, false);
+                int player = nextPlayer();
 
-                Image img = panels[i - 1].GetComponent<Image>();
-                img.color = UnityEngine.Color.green;
+                if (player != -1)
+                {
+                    Vector3 pos = new Vector3(0, 0, 0);
+                    GameObject a = Instantiate(charactersPrefabs[player]);
+                    a.transform.SetPositionAndRotation(pos, Quaternion.identity);
+                    a.transform.SetParent(panels[i].transform, false);
+
+                    Image img = panels[i].GetComponent<Image>();
+                    img.color = UnityEngine.Color.green;
+
+                    insertedCharacters[i] = a;
+                    selectedCharacters[i] = true;
+                }
             }
 
-            if (Input.GetKeyDown("joystick " + i + " button " + annulationButton)) // Dans le cas xBox
+            if (Input.GetKeyDown("joystick " + (int)(i+1) + " button " + annulationButton)) // Dans le cas xBox
             {
                 //If A Acccept, If B Debug.Log("Joueur B " + i);
-
-                Image img = panels[i-1].GetComponent<Image>();
+                selectedCharacters[i] = false;
+                Image img = panels[i].GetComponent<Image>();
                 img.color = UnityEngine.Color.grey;
+
+                Destroy(insertedCharacters[i]);
             }
         }
     }

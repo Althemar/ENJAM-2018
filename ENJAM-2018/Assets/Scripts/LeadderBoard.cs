@@ -3,39 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LeadderBoard : MonoBehaviour {
+namespace ENJAM2018
+{
 
-    public GameObject panel;
-
-    // Score Pair ##
-    //  - Name
-    //  - Score
-    public GameObject scorePair;
-
-    public GameObject[] scores = new GameObject[4];
-
-
-    void Start () { 
-        for(int i = 0; i< 4; i++)
-        {
-            Vector3 pos = new Vector3(0, -((i)*20), 0);
-            GameObject a = Instantiate(scorePair);
-            a.transform.SetPositionAndRotation(pos, Quaternion.identity);
-            a.transform.SetParent(panel.transform, false);
-            scores[i] = a;
-        }
-
-        setScores(1, 100);
-	}
-	
-	void Update () {
-   
-    }
-
-    public void setScores(int player, int score)
+    public class LeadderBoard : MonoBehaviour
     {
-        //GetChild() -> 1 = Score -> GetComponent<Text>
-        Text s = scores[player].transform.GetChild(1).GetComponent<Text>();
-        s.text = score.ToString();
+
+        public GameObject panel;
+
+        // Score Pair ##
+        //  - Name
+        //  - Score
+        public GameObject scorePairPrefab;
+
+        ScoreKeeper scoreKeeper;
+
+        void Start() {
+
+            scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+
+            for (int i = 0; i < scoreKeeper.Scores.Count; i++) {
+                Vector3 pos = new Vector3(0, -((i) * 20), 0);
+                GameObject scorePair = Instantiate(scorePairPrefab);
+                scorePair.transform.SetPositionAndRotation(pos, Quaternion.identity);
+                scorePair.transform.SetParent(panel.transform, false);
+
+                scorePair.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Player " + i;
+                scorePair.transform.GetChild(1).gameObject.GetComponent<Text>().text = scoreKeeper.Scores[i].ToString(); ;
+            }
+        }
     }
 }
