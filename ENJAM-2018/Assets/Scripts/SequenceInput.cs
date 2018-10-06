@@ -2,10 +2,10 @@
 
 namespace ENJAM2018 {
 	public enum SequenceInputType : int {
-		Up = 0,
+		Down = 0,
 		Right = 1,
-		Down = 2,
-		Left = 3
+		Left = 2,
+		Up = 3
 	}
 	public static class SequenceInputTypeExt {
 		public static SequenceInput GetSequenceInput(this SequenceInputType type) {
@@ -37,10 +37,13 @@ namespace ENJAM2018 {
 		}
 
 		public static SequenceInput GetRandom() {
-			return ((SequenceInputType) Random.Range(0, 4)).GetSequenceInput();
-		}
+            int rand = Random.Range(0, 4);
+			SequenceInput sequenceInput = ((SequenceInputType) rand).GetSequenceInput();
+            sequenceInput.inputKey = rand;
+            return sequenceInput;
+        }
 
-		public GameObject prefab;
+        public GameObject prefab;
 		public int inputKey;
 
 		public SequenceInput(GameObject prefab) {

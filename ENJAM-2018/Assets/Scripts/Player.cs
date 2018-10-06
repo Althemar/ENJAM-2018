@@ -7,56 +7,51 @@ namespace ENJAM2018
 {
     public class Player : MonoBehaviour
     {
+
+        bool moving;
         float moveProgress;
         float moveSpeed;
+
+        bool lost;
 
         int score;
         int scoreMultiplicator;
         int combo;
-
-        CharacterState characterState = CharacterState.Waiting;
+        
         PlayersManager playerManager;
 
         private SequenceTile tile;
         private LevelSequence level;
-
-        enum CharacterState
-        {
-            Waiting,
-            Moving
-        }
 
         private void Start() {
             playerManager = GetComponentInParent<PlayersManager>();
             level = GetComponentInParent<LevelSequence>();
 
             tile = level.Tiles[playerManager.beginTile];
+            tile.AddPlayerOnTile(this);
             float tileX = tile.gameObject.transform.position.x;
             transform.position = new Vector3(tileX, transform.position.y, transform.position.z);
         }
 
         void FixedUpdate() {
 
-            switch (characterState) {
+            if (moving) {
+                moveProgress += moveSpeed * Time.fixedDeltaTime;
+                Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x, transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
 
-                case CharacterState.Moving:
-
-                    moveProgress += moveSpeed * Time.fixedDeltaTime;
-                    Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x, transform.position.y, transform.position.z);
-                    transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
-
-                    if (moveProgress >= 1) {
-                        characterState = CharacterState.Waiting;
-                        moveProgress = 0;
-                    }
-                    break;
+                if (moveProgress >= 1) {
+                    moving = false;
+                    moveProgress = 0;
+                }
             }
         }
 
         public void Move(bool goForward) {
             moveProgress = 0;
-            characterState = CharacterState.Moving;
+            moving = true;
 
+            tile.RemovePlayerFromTile(this);
             if (goForward) {
                 tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
@@ -65,6 +60,7 @@ namespace ENJAM2018
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
             }
+            tile.AddPlayerOnTile(this);
         }
 
         public void IncreaseScore() {
@@ -84,15 +80,22 @@ namespace ENJAM2018
         }
 
         public void CheckInput(int keyId) {
-            if (keyId == 0) { // Check input and move forward if right
-                Move(true);
-
+            if (lost) {
+                return;
             }
-            else {
+
+            if (keyId == tile.requiredInput.inputKey && level.TilePosition(tile) < 10) {
+                Move(true);
+            }
+            else if (keyId != tile.requiredInput.inputKey) {
                 Move(false);
                 combo = 0;
                 scoreMultiplicator = 0;
             }
+        }
+
+        public void Lose() {
+            lost = true;
         }
 
     }
