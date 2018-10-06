@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
 namespace ENJAM2018 {
-	public enum SequenceInputType {
-		Up,
-		Right,
-		Down,
-		Left
+	public enum SequenceInputType : int {
+		Up = 0,
+		Right = 1,
+		Down = 2,
+		Left = 3
 	}
 	public static class SequenceInputTypeExt {
 		public static SequenceInput GetSequenceInput(this SequenceInputType type) {
@@ -34,6 +34,10 @@ namespace ENJAM2018 {
 			Right = new SequenceInput(prefabRight);
 			Down = new SequenceInput(prefabDown);
 			Left = new SequenceInput(prefabLeft);
+		}
+
+		public static SequenceInput GetRandom() {
+			return ((SequenceInputType) Random.Range(0, 4)).GetSequenceInput();
 		}
 
 		public GameObject prefab;

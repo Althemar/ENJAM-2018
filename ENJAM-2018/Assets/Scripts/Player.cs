@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ENJAM2018;
 
 public class Player : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour {
 
     CharacterState characterState = CharacterState.Waiting;
     PlayersManager playerController;
+
+	private SequenceTile tile;
 
     enum CharacterState
     {
@@ -44,6 +47,7 @@ public class Player : MonoBehaviour {
     public void MoveForward() {
         dashProgress = 0;
         dashTarget = transform.position + new Vector3(playerController.DashDistance, 0, 0);
+		//dashTarget = tile.next.transform.position;
         characterState = CharacterState.MovingForward;
     }
 }
