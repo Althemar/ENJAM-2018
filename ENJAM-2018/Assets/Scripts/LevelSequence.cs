@@ -7,7 +7,8 @@ namespace ENJAM2018 {
 		[SerializeField] private Camera mainCamera;
 		[SerializeField] private float tileSize = 2f;
 		[SerializeField] private float speed = 2f;
-		[SerializeField] private float acceleration = .01f;
+		[Tooltip("The distance needed to increase the speed by one")]
+		[SerializeField] private float speedIncreaseDistance = 20f;
 		[Header("Temporary")]
 		[SerializeField] private GameObject prefabUp;
 		[SerializeField] private GameObject prefabRight;
@@ -41,9 +42,9 @@ namespace ENJAM2018 {
 			transform.position = new Vector3(cameraBounds.xMin + tileSize / 2f, 0f);
 
 		}
-
+		
 		private void FixedUpdate() {
-			speed += acceleration * Time.fixedDeltaTime;
+			speed += 1f / speedIncreaseDistance * Time.fixedDeltaTime;
 			float distance = speed * Time.fixedDeltaTime;
 			transform.position -= Vector3.right * distance;
 			distanceTravelled += distance;
