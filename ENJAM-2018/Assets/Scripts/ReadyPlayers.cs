@@ -92,7 +92,7 @@ public class ReadyPlayers : MonoBehaviour {
 
                 int player = nextPlayer();
 
-                if (player != -1)
+                if (player != -1 && selectedCharacters[i] == false)
                 {
                     Vector3 pos = new Vector3(0, 0, 0);
                     GameObject a = Instantiate(charactersPrefabs[player]);
