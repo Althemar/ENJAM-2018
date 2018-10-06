@@ -69,7 +69,7 @@ namespace ENJAM2018 {
 		}
 
 		private void GenerateAllTiles() {
-			SequenceInputType[] seq = generator.GenerateSequence(Tiles.Length);
+			SequenceInput[] seq = generator.GenerateSequence(Tiles.Length);
 			for (int i = 0; i < Tiles.Length; i++) {
 				SequenceTile tile = CreateTile(seq[i], tileSize * i);
 				Tiles[i] = tile;
@@ -83,11 +83,10 @@ namespace ENJAM2018 {
 		}
 
 		private SequenceTile CreateRandomTile(float distanceFromStart) {
-			return CreateTile(SequenceInput.GetRandomType(), distanceFromStart);
+			return CreateTile(SequenceInput.GetRandom(), distanceFromStart);
 		}
 
-		private SequenceTile CreateTile(SequenceInputType inputType, float distanceFromStart) {
-			SequenceInput input = inputType.GetSequenceInput();
+		private SequenceTile CreateTile(SequenceInput input, float distanceFromStart) {
 			GameObject go = Instantiate(input.prefab, transform);
 			SequenceTile tile = go.GetComponent<SequenceTile>();
 			tile.requiredInput = input;

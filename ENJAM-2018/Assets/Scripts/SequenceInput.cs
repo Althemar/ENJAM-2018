@@ -46,10 +46,15 @@ namespace ENJAM2018 {
 
         public GameObject prefab;
 		public int inputKey;
+		public bool isDouble = false;
 
 		public SequenceInput(GameObject prefab, int key) {
 			this.prefab = prefab;
 			this.inputKey = key;
+		}
+
+		public SequenceInput Copy() {
+			return new SequenceInput(prefab, inputKey);
 		}
 
 	}

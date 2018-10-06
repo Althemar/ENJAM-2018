@@ -5,41 +5,45 @@ namespace ENJAM2018 {
 
 		public const int PREVIOUS_BUFFER_SIZE = 3;
 
-		private SequenceInputType[] previous;
+		private SequenceInput[] previous;
 		private int sequenceIndex = 0;
 		private PhaseManager phaseManager;
 
 		public void Init() {
 			phaseManager = PhaseManager.I;
-			previous = new SequenceInputType[PREVIOUS_BUFFER_SIZE];
+			previous = new SequenceInput[PREVIOUS_BUFFER_SIZE];
 		}
 
-		public SequenceInputType[] GenerateSequence(int count) {
-			SequenceInputType[] sequence = new SequenceInputType[count];
+		public SequenceInput[] GenerateSequence(int count) {
+			SequenceInput[] sequence = new SequenceInput[count];
 			for (int i = 0; i < count; i++) {
 				sequence[i] = GenerateNext();
 			}
 			return sequence;
 		}
 
-		public SequenceInputType GenerateNext() {
+		public SequenceInput GenerateNext() {
 			float rnd = Random.value;
-			SequenceInputType inputType;
+			SequenceInput inputType;
 			if (rnd < phaseManager.currentPhase.probDown) {
-				inputType = SequenceInputType.Down;
+				inputType = SequenceInput.Down.Copy();
 			} else if (rnd < phaseManager.currentPhase.probDown + phaseManager.currentPhase.probRight) {
-				inputType = SequenceInputType.Right;
+				inputType = SequenceInput.Right.Copy();
 			} else if (rnd < phaseManager.currentPhase.probDown + phaseManager.currentPhase.probRight + phaseManager.currentPhase.probLeft) {
-				inputType = SequenceInputType.Left;
+				inputType = SequenceInput.Left.Copy();
 			} else {
-				inputType = SequenceInputType.Up;
+				inputType = SequenceInput.Up.Copy();
+			}
+			rnd = Random.value;
+			if (rnd < phaseManager.currentPhase.probDouble) {
+				inputType.isDouble = true;
 			}
 			PushLast(inputType);
 			sequenceIndex++;
 			return inputType;
 		}
 
-		private void PushLast(SequenceInputType input) {
+		private void PushLast(SequenceInput input) {
 			for (int i = 1; i < PREVIOUS_BUFFER_SIZE; i++) {
 				previous[i - 1] = previous[i];
 			}
