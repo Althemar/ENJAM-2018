@@ -14,11 +14,12 @@ namespace ENJAM2018
 
         public AnimatorController testAnimator;
 
-
-        public int NumberOfPlayers;
+                                
         public GameObject PlayerPrefab;
         public GameObject PlayerScoreUIPrefab;
         public GameObject Level;
+
+        public int NumberOfPlayers;
         public float spaceBetweenPlayers;
 
         public enum GameStates
@@ -47,6 +48,14 @@ namespace ENJAM2018
 
         private void Start() {
 
+            GameObject selectedPlayersGo = GameObject.Find("SelectedPlayersKeeper");
+            SelectedPlayersKeeper selectedPlayers = null;
+          
+            if (selectedPlayersGo) {
+                selectedPlayers = GetComponent<SelectedPlayersKeeper>();
+                NumberOfPlayers = selectedPlayers.SelectedCharacters.Count;
+            }
+           
             float yPos;
             if (NumberOfPlayers % 2 == 0) {
                 yPos = 0 + NumberOfPlayers / 2 - spaceBetweenPlayers / 2;
@@ -71,9 +80,18 @@ namespace ENJAM2018
                 player.scoreUI = UIManager.Instance.CreatePlayerScoreUI(PlayerScoreUIPrefab);
 
                 Animator animator = player.GetComponent<Animator>();
-                animator.runtimeAnimatorController = (RuntimeAnimatorController)testAnimator;
+                if (selectedPlayers) {
+                    animator.runtimeAnimatorController = (RuntimeAnimatorController)selectedPlayers.SelectedCharacters[i].animator;
+                }
+                else {
+                    animator.runtimeAnimatorController = (RuntimeAnimatorController) testAnimator;
+                }
 
                 PlayersManager.Instance.Players.Add(player);
+            }
+
+            if (selectedPlayers) {
+                Destroy(selectedPlayersGo);
             }
         }
 

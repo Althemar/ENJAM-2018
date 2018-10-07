@@ -3,141 +3,123 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ReadyPlayers : MonoBehaviour {
+    
 
-    public GameObject canvas;
-    public GameObject tileDown;
+    public List<Character> characters;
+    public List<CharacterSelection> characterSelections;
 
-    public GameObject[] panels = new GameObject[4];
-    public GameObject[] charactersPrefabs = new GameObject[4];
+    List<ControllerMapping> inputManager;
 
-    private GameObject[] insertedCharacters = new GameObject[4];
-
-    public bool[] selectedCharacters = new bool[4];
-
-    public string scene;
-
-    public enum Players : int {
-        Player1 = 0,
-        Player2 = 1,
-        Player3 = 2,
-        Player4 = 3
-    }
+    public Button validationButton;
 
 
-    [SerializeField] Players owner;
-
-    ControllerMapping inputManager;
-
-    string validationButton = "0";
-    string annulationButton = "1";
-
-    public int GetRandomPlayer()
-    {
-        return Random.Range(0, 4);
-    }
+    public SelectedPlayersKeeper selectedPlayersKeeper;
 
     void Start () {
-        for (int i = 0; i < 4; i++)
-        {
-            Image img = panels[i].GetComponent<Image>();
-            img.color = UnityEngine.Color.grey;
-        }
-
+        /*
         string[] names = Input.GetJoystickNames();
-        if (names[(int)owner].Contains("Xbox"))
-        {
-            inputManager = InputManager.Instance.xboxController;
-        }
-        else if (names[(int)owner].Contains("Wireless Controller"))
-        {
-            inputManager = InputManager.Instance.psMapping;
-            validationButton = "1";
-            annulationButton = "2";
-        }
-        else
-        {
-            inputManager = InputManager.Instance.xboxController;
+        for (int i = 0; i < names.Length; i++) {
+            if (names[i].Contains("Xbox")) {
+                inputManager.Add(InputManager.Instance.xboxController);
+            }
+            else if (names[i].Contains("Wireless Controller")) {
+                inputManager.Add(InputManager.Instance.psMapping);
+            }
+            else if (names[i] == ""){
+                inputManager.Add(InputManager.Instance.xboxController);
+            }
+            else {
+                inputManager.Add(null);
+            }
+        }*/
+
+        validationButton.interactable = false;
+
+       
+    }
+
+    void Update() {
+
+        for (int i = 0; i < 4; i++) {
+            if (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + 0)) {
+                if (!AllCharactersSelected() && PlayerHasNotJoined(i)) {
+                    int characterSelectionId = GetFirstUnselectedCharacter();
+                    int randomCharacter = Random.Range(0, characters.Count);
+                    characterSelections[characterSelectionId].JoinGame(i, characters[randomCharacter]);
+                    validationButton.interactable = true;
+                }
+            }
+            if (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + 1)) {
+                if (!PlayerHasNotJoined(i)) {
+                    CharacterSelection characterSelection = GetSelectedCharacted(i);
+                    characterSelection.QuitGame();
+
+                    if (!AtLeastOneSelected()) {
+                        validationButton.interactable = false;
+                    }
+                }
+            }
+            if  (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + 2)) {
+                if (!PlayerHasNotJoined(i) && AtLeastOneSelected()) {
+                    selectedPlayersKeeper.SelectedCharacters.Clear();
+                    for (int j = 0; j < characterSelections.Count; j++) {
+                        if (characterSelections[j].selectedCharacter != null) {
+                            selectedPlayersKeeper.SelectedCharacters.Add(characterSelections[j].selectedCharacter);
+                        }
+                    }
+                    SceneManager.LoadScene("damien_scene");
+                }
+            }
         }
     }
 
-    int nextPlayer()
-    {
-        int randomPlayerPrefab = GetRandomPlayer();
-
-        if (selectedCharacters[randomPlayerPrefab] == false)
-        {
-            return randomPlayerPrefab;
-        }
-
-        for (int i = 0; i<4; i++)
-        {
-            if (selectedCharacters[i] == false)
-            {
+    public int GetFirstUnselectedCharacter() {
+        for (int i = 0; i < characterSelections.Count; i++) {
+            if (!characterSelections[i].Selected) {
                 return i;
             }
         }
-
         return -1;
     }
 
-    int totalSelectedPlayers()
-    {
-        int players = 0;
-        for (int i = 0; i < 4; i++)
-        {
-            if (selectedCharacters[i] == true) players++;
-        }
-        return players;
-    }
-
-    void ChangeScene(string s)
-    { 
-        DontDestroyOnLoad(gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(s);
-    }
-	
-	void Update () {
-
-        //Tester touts les jouers
-        for (int i = 0; i < 4; i++)
-        {
-            if (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + validationButton))
-            {
-                //If A Acccept, If B Debug.Log("Joueur A " + i);
-
-                int player = nextPlayer();
-
-                if (player != -1 && selectedCharacters[i] == false)
-                {
-                    Vector3 pos = new Vector3(0, 0, 0);
-                    GameObject a = Instantiate(charactersPrefabs[player]);
-                    a.transform.SetPositionAndRotation(pos, Quaternion.identity);
-                    a.transform.SetParent(panels[i].transform, false);
-
-                    Image img = panels[i].GetComponent<Image>();
-                    img.color = UnityEngine.Color.green;
-
-                    insertedCharacters[i] = a;
-                    selectedCharacters[i] = true;
-                }
-
-                if(selectedCharacters[i] == true && totalSelectedPlayers() > 1)
-                {
-                    ChangeScene(scene);
-                }
-            }
-
-            if (Input.GetKeyDown("joystick " + (int)(i+1) + " button " + annulationButton)) // Dans le cas xBox
-            {
-                //If A Acccept, If B Debug.Log("Joueur B " + i);
-                selectedCharacters[i] = false;
-                Image img = panels[i].GetComponent<Image>();
-                img.color = UnityEngine.Color.grey;
-
-                Destroy(insertedCharacters[i]);
+    public bool AllCharactersSelected() {
+        for (int i = 0; i < characterSelections.Count; i++) {
+            if (!characterSelections[i].Selected) {
+                return false;
             }
         }
+        return true;
     }
+
+    public bool PlayerHasNotJoined(int player) {
+        for (int i = 0; i < characterSelections.Count; i++) {
+            if (characterSelections[i].Player == player) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public CharacterSelection GetSelectedCharacted(int player) {
+        for (int i = 0; i < characterSelections.Count; i++) {
+            if (characterSelections[i].Player == player) {
+                return characterSelections[i];
+            }
+        }
+        return null;
+    }
+
+    public bool AtLeastOneSelected() {
+        for (int i = 0; i < characterSelections.Count; i++) {
+            if (characterSelections[i].Selected) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
+
