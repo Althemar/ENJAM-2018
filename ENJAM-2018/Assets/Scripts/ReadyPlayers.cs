@@ -11,6 +11,8 @@ public class ReadyPlayers : MonoBehaviour {
     public List<Character> characters;
     public List<CharacterSelection> characterSelections;
 
+    List<Character> availableCharacters;
+
     List<ControllerMapping> inputManager;
 
     public Button validationButton;
@@ -19,6 +21,8 @@ public class ReadyPlayers : MonoBehaviour {
     public SelectedPlayersKeeper selectedPlayersKeeper;
 
     void Start () {
+
+
         /*
         string[] names = Input.GetJoystickNames();
         for (int i = 0; i < names.Length; i++) {
@@ -38,6 +42,11 @@ public class ReadyPlayers : MonoBehaviour {
 
         validationButton.interactable = false;
 
+        availableCharacters = new List<Character>();
+        for (int i = 0; i < characters.Count; i++) {
+            availableCharacters.Add(characters[i]);
+        }
+
        
     }
 
@@ -49,12 +58,14 @@ public class ReadyPlayers : MonoBehaviour {
                     int characterSelectionId = GetFirstUnselectedCharacter();
                     int randomCharacter = Random.Range(0, characters.Count);
                     characterSelections[characterSelectionId].JoinGame(i, characters[randomCharacter]);
+                    characters.RemoveAt(randomCharacter);
                     validationButton.interactable = true;
                 }
             }
             if (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + 1)) {
                 if (!PlayerHasNotJoined(i)) {
                     CharacterSelection characterSelection = GetSelectedCharacted(i);
+                    characters.Add(characterSelection.selectedCharacter);
                     characterSelection.QuitGame();
 
                     if (!AtLeastOneSelected()) {
