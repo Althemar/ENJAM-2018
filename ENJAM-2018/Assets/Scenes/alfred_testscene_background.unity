@@ -207,7 +207,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.36334103, g: 0.48252392, b: 0.6698113, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1673,13 +1673,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstIsBack: 1
-  backgroundLayers:
-  - transf: {fileID: 1256066251}
-    relativeSpeed: -1
-    widthOverride: 0
-  - transf: {fileID: 1963587701}
-    relativeSpeed: 0
-    widthOverride: 0
+  backgroundLayers: []
+  availableSprites:
+  - {fileID: 21300000, guid: 5a25d1b80e3c2434fa103beb89754d45, type: 3}
+  - {fileID: 21300000, guid: 8ef59595303abfc4b9e27c80ab3264c2, type: 3}
+  - {fileID: 21300000, guid: db87a1da6b03c4d40aa8553ab81bdf36, type: 3}
+  - {fileID: 21300000, guid: d512f72599894ca46a600b56fc34496c, type: 3}
+  - {fileID: 21300000, guid: 32ed7ca9725653746a7060b5b16d0c06, type: 3}
+  relativeSpeed: -1
 --- !u!4 &674755930
 Transform:
   m_ObjectHideFlags: 0
@@ -1687,7 +1688,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 674755928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9778101, y: -0.3241862, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1963587701}
@@ -2746,7 +2747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1256066251
 Transform:
   m_ObjectHideFlags: 0
@@ -4567,7 +4568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1963587701
 Transform:
   m_ObjectHideFlags: 0
