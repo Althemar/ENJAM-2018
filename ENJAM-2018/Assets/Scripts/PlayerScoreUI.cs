@@ -40,6 +40,7 @@ namespace ENJAM2018
         }
 
         public void SetScore(int score) {
+            Debug.Log("Set score");
             scoreText.text = score.ToString();
         }
 
