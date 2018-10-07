@@ -10,6 +10,7 @@ namespace ENJAM2018
 
         bool playing = true;
         bool moving;
+        bool movingBack;
         float moveProgress;
         float moveSpeed;
 
@@ -18,6 +19,10 @@ namespace ENJAM2018
         int score;
         int scoreMultiplicator = 1;
         int combo;
+
+        bool punched;
+        bool canPunch = true;
+        float punchProgress;
         
         PlayersManager playerManager;
         PlayerController playerController;
@@ -52,6 +57,32 @@ namespace ENJAM2018
         {
             get { return character; }
             set { character = value; }
+        }
+
+        public SequenceTile Tile
+        {
+            get { return tile; }
+        }
+
+        public bool MovingBack
+        {
+            get { return movingBack; }
+        }
+
+        public float MovingProgress
+        {
+            get { return moveProgress; }
+        }
+
+        public bool Moving
+        {
+            get { return moving; }
+        }
+
+        public bool Punched
+        {
+            get { return punched; }
+            set { punched = value; }
         }
         
         private void Start() {
@@ -104,8 +135,18 @@ namespace ENJAM2018
 
                 if (moveProgress >= 1) {
                     moving = false;
+                    movingBack = false;
+                    punched = false;
                     animator.SetBool("Is Moving", false);
                     moveProgress = 0;
+                }
+            }
+            if (!canPunch) {
+                punchProgress += 1 / playerManager.timeBetweenPunch * Time.fixedDeltaTime;
+                if (punchProgress >= 1) {
+                    canPunch = true;
+                    punchProgress = 0;
+                    Debug.Log("Can Punch");
                 }
             }
         }
@@ -114,6 +155,7 @@ namespace ENJAM2018
             moveProgress = 0;
             animator.SetBool("Is Moving", true);
             moving = true;
+            movingBack = !goForward;
 
             tile.RemovePlayerFromTile(this);
             if (goForward) {
@@ -123,6 +165,7 @@ namespace ENJAM2018
 				particleSystemDash.Emit(1); // Particles
             }
             else {
+                Debug.Log("MovingBack");
 				if (tile.previous == null) return;
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
@@ -158,16 +201,42 @@ namespace ENJAM2018
                 return;
             }
 
-            if (tile.next != null && keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
-                Move(true);
-                IncreaseScore();
+            if (keyId <= 3) {
+                if (tile.next != null && keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
+                    Move(true);
+                    IncreaseScore();
+                }
+                else if (keyId != tile.next.requiredInput.inputKey) {
+                    Move(false);
+                    movingBack = true;
+                    combo = 0;
+                    scoreMultiplicator = 1;
+                    scoreUI.SetCombo(combo);
+                    scoreUI.SetMultiplicator(scoreMultiplicator);
+                }
             }
-            else if (keyId != tile.next.requiredInput.inputKey) {
-                Move(false);
-                combo = 0;
-                scoreMultiplicator = 1;
-                scoreUI.SetCombo(combo);
-                scoreUI.SetMultiplicator(scoreMultiplicator);
+            
+        }
+
+        public void Punch() {
+            if (!punched || moveProgress > 0.9) {
+                /*
+                List<Player> others = playerManager.GetOtherPlayersOnTile(this);
+                if (others.Count == 0) {
+                    return;
+                }
+                for (int i = 0; i < others.Count; i++) {
+                    if ((others[i].MovingBack && moveProgress > 0.9) || (!others[i].MovingBack && moveProgress < 0.2) || (!others[i].Moving)) {
+                        others[i].Move(false);
+                        scoreMultiplicator--;
+                        scoreUI.SetMultiplicator(scoreMultiplicator);
+                        others[i].Punched = true;
+                    }
+                }*/
+                animator.SetTrigger("Punch");
+                canPunch = false;
+                punchProgress = 0f;
+
             }
         }
 

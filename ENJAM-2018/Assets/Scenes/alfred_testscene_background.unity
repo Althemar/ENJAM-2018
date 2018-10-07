@@ -141,6 +141,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTile: 4
+  moveCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   MovingBackSpeed: 2
   DashSpeed: 7
   DashDistance: 3
@@ -149,16 +155,7 @@ MonoBehaviour:
   bestTiles: 5
   bestTilesScore: 3
   comboMax: 10
-  onRightInput:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onWrongInput:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  timeBetweenPunch: 0
 --- !u!4 &106359747
 Transform:
   m_ObjectHideFlags: 0
