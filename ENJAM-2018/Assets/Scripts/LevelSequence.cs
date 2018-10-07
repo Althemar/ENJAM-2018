@@ -55,6 +55,11 @@ namespace ENJAM2018 {
 		}
 		
 		private void FixedUpdate() {
+
+            if (GameManager.Instance.GameState != GameManager.GameStates.playing) {
+                return;
+            }
+
 			speed = Mathf.Lerp(phaseManager.currentPhase.startSpeed, phaseManager.currentPhase.endSpeed, phaseManager.PhaseProgress);
 			transform.position -= Vector3.right * speed * Time.fixedDeltaTime;
 			distanceTravelled = -transform.position.x - cameraBounds.width / 2f + tileSize / 2f;

@@ -46,6 +46,7 @@ public class ReadyPlayers : MonoBehaviour {
         for (int i = 0; i < characters.Count; i++) {
             availableCharacters.Add(characters[i]);
         }
+        
 
        
     }
@@ -56,6 +57,7 @@ public class ReadyPlayers : MonoBehaviour {
             if (Input.GetKeyDown("joystick " + (int)(i + 1) + " button " + 0)) {
                 if (!AllCharactersSelected() && PlayerHasNotJoined(i)) {
                     int characterSelectionId = GetFirstUnselectedCharacter();
+                    characterSelectionId = i;
                     int randomCharacter = Random.Range(0, characters.Count);
                     characterSelections[characterSelectionId].JoinGame(i, characters[randomCharacter]);
                     characters.RemoveAt(randomCharacter);
