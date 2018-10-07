@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: David
   m_EditorClassIdentifier: 
   name: David
-  sprite: {fileID: 21300000, guid: e7bf9edd217f5f2479540ac3aea4a1c6, type: 3}
+  sprite: {fileID: 21300000, guid: ff7fbea0ac7d95b4b82b539ad17eb8a4, type: 3}
   animator: {fileID: 9100000, guid: 817913cb3b73afe439fc99e09731d7a2, type: 2}
