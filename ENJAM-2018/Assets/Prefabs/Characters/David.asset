@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: David
   sprite: {fileID: 21300000, guid: ff7fbea0ac7d95b4b82b539ad17eb8a4, type: 3}
+  faceSprite: {fileID: 21300000, guid: 126538b55495f404ebdf428218b97b41, type: 3}
   animator: {fileID: 9100000, guid: 817913cb3b73afe439fc99e09731d7a2, type: 2}
   adaptSize: 0.7
   uiAdaptSize: 125
