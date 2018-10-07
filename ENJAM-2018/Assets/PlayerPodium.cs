@@ -11,7 +11,7 @@ namespace ENJAM2018
         public Text PlayerScoreText;
         public Image CharacterImage;
 
-        public void Start() {
+        public void Awake() {
             PlayerNameText.text = "";
             PlayerScoreText.text = "";
             gameObject.SetActive(false);

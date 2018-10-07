@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 67c3178b03296994f9307f65dc4845ab
+guid: 30319a2f87d22d241ae0d7912de8d352
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tractopol_run_0
-    21300002: tractopol_run_1
-    21300004: tractopol_run_2
-    21300006: tractopol_run_3
+    21300000: cat_punch_0
+    21300002: cat_punch_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,81 +86,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tractopol_run_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 588
-        width: 926
-        height: 588
-      alignment: 9
-      pivot: {x: 0.52237135, y: 0.13594522}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9433230077910d344bb1fe739244ddc9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tractopol_run_1
-      rect:
-        serializedVersion: 2
-        x: 926
-        y: 588
-        width: 926
-        height: 588
-      alignment: 9
-      pivot: {x: 0.524857, y: 0.12420156}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1df1fd8802b42f4985c306d3d56e9f3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tractopol_run_2
+      name: cat_punch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 926
-        height: 588
-      alignment: 9
-      pivot: {x: 0.52485704, y: 0.128116}
+        width: 363
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0990bd396ed7ccd4ab4f62050167946f
+      spriteID: db77518600ff8a44e85cc61c0fb56921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tractopol_run_3
+      name: cat_punch_1
       rect:
         serializedVersion: 2
-        x: 926
+        x: 363
         y: 0
-        width: 926
-        height: 588
-      alignment: 9
-      pivot: {x: 0.5198856, y: 0.12420157}
+        width: 363
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ddc4682e7b33a24a9f845e5399ff097
+      spriteID: f53612da2e59e1e4bb0d38274a2fec30
       vertices: []
       indices: 
       edges: []
@@ -170,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b4717dc8533b421418542068b6c6822a
+    spriteID: e6c1a1dd3f452fe438473449d72e1875
     vertices: []
     indices: 
     edges: []
