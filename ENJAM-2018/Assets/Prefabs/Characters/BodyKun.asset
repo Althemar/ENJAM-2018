@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78fe4f9030dd2ce4a9daad1b27a7b92f, type: 3}
+  m_Name: BodyKun
+  m_EditorClassIdentifier: 
+  name: Bodykun Super
+  sprite: {fileID: 21300002, guid: 99440eda8bc6d6e488606a69c25e6f52, type: 3}
+  animator: {fileID: 9100000, guid: 4d66f0e9775f46f4a9e69641abae690d, type: 2}

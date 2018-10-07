@@ -12,9 +12,12 @@ namespace ENJAM2018
         public ControllerMapping xboxController;
         public ControllerMapping psMapping;
 
+       
+
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                DontDestroyOnLoad(gameObject);
             }
             else {
                 Destroy(gameObject);

@@ -14,8 +14,7 @@ namespace ENJAM2018
 
         public AnimatorController testAnimator;
 
-
-        public int NumberOfPlayers;
+                                
         public GameObject PlayerPrefab;
         public GameObject PlayerScoreUIPrefab;
         public GameObject Level;
@@ -47,13 +46,19 @@ namespace ENJAM2018
 
         private void Start() {
 
+            SelectedPlayersKeeper selectedPlayers = GameObject.Find("SelectedPlayersKeeper").GetComponent<SelectedPlayersKeeper>();
+
+            int numberOfPlayers = selectedPlayers.SelectedCharacters.Count;
+
+            Destroy(selectedPlayers.gameObject);
+
             float yPos;
-            if (NumberOfPlayers % 2 == 0) {
-                yPos = 0 + NumberOfPlayers / 2 - spaceBetweenPlayers / 2;
+            if (numberOfPlayers % 2 == 0) {
+                yPos = 0 + numberOfPlayers / 2 - spaceBetweenPlayers / 2;
                
             }
-            else if (NumberOfPlayers > 1){
-                yPos = 0 + spaceBetweenPlayers * (NumberOfPlayers - 2);
+            else if (numberOfPlayers > 1){
+                yPos = 0 + spaceBetweenPlayers * (numberOfPlayers - 2);
             }
             else {
                 yPos = 0;
@@ -61,7 +66,7 @@ namespace ENJAM2018
 
             int playerId = 0;
 
-            for (int i = 0; i < NumberOfPlayers; i++) {
+            for (int i = 0; i < numberOfPlayers; i++) {
                 Player player = Instantiate(PlayerPrefab, Level.transform).GetComponent<Player>();
                 player.transform.position = new Vector3(0, yPos, 0);
                 yPos -= spaceBetweenPlayers;
