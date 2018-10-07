@@ -141,24 +141,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTile: 4
+  moveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 10.823321
+      outSlope: 10.823321
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.061108757
+    - serializedVersion: 3
+      time: 0.30629075
+      value: 1.0043778
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   MovingBackSpeed: 2
   DashSpeed: 7
   DashDistance: 3
   MovebackSpeed: 12
   basicScore: 1
-  bestTiles: 5
-  bestTilesScore: 3
+  bestTiles: 3
+  bestTilesScore: 5
   comboMax: 10
-  onRightInput:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onWrongInput:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  timeBetweenPunch: 0
 --- !u!4 &106359747
 Transform:
   m_ObjectHideFlags: 0
@@ -9771,6 +9786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 141849067}
   tileSize: 2
+  tileLineYPos: -3
   speed: 2
   prefabUp: {fileID: 1455064947962380, guid: c9e352801d6a5874797882754116d8d0, type: 2}
   prefabRight: {fileID: 1455064947962380, guid: 6552ff043a2b1b946a9feddae71d3a1e,

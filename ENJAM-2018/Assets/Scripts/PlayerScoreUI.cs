@@ -14,6 +14,8 @@ namespace ENJAM2018
         public Text comboText;
         public Image comboFillingImage;
 
+        
+
         Player player;
         string playerString;
 
