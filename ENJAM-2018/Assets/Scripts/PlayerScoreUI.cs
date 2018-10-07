@@ -14,6 +14,8 @@ namespace ENJAM2018
         public Text comboText;
         public Image comboFillingImage;
 
+        
+
         Player player;
         string playerString;
 
@@ -40,6 +42,7 @@ namespace ENJAM2018
         }
 
         public void SetScore(int score) {
+            Debug.Log("Set score");
             scoreText.text = score.ToString();
         }
 
