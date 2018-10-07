@@ -10,27 +10,31 @@ namespace ENJAM2018 {
 			public AudioClip clip;
 		}
 
-		private static SoundManager instance;
-		public static SoundManager I {
-			get {
-				if (instance == null) {
-					instance = FindObjectOfType<SoundManager>();
-					instance.Init();
-				}
-				return instance;
-			}
-		}
-
+		public static SoundManager Instance;
+		
 		public AudioAsset[] assets;
 		private AudioSource source;
 
-		public void Init() {
+        private void Awake() {
+            if (Instance == null) {
+                Instance = this;
+                source = GetComponent<AudioSource>();
+
+                DontDestroyOnLoad(gameObject);
+            }
+            else {
+                Destroy(gameObject);
+            }
+        }
+
+        public void Start() {
+            
 			transform.position = Camera.main.transform.position;
-			source = GetComponent<AudioSource>();
 		}
 
 		public void PlayUnlocalized(string name) {
 			AudioAsset asset = GetAsset(name);
+            source.Stop();
 			source.PlayOneShot(asset.clip);
 		}
 

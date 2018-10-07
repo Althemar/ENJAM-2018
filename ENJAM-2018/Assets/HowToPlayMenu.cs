@@ -18,8 +18,6 @@ public class HowToPlayMenu : MonoBehaviour
     }
 
     public void DisplayHowToPlay() {
-
-        Debug.Log("display");
         howToPlayDisplayed = true;
         howToPlayPanel.SetActive(true);
         for (int i = 0; i < buttons.Count; i++) {
@@ -28,7 +26,9 @@ public class HowToPlayMenu : MonoBehaviour
     }
 
     private void Update() {
+
         if (howToPlayDisplayed && Input.GetKeyDown("joystick 1 button 1")) {
+            Debug.Log("Quit how to play");
             howToPlayDisplayed = false;
             howToPlayPanel.SetActive(false);
             for (int i = 0; i < buttons.Count; i++) {
