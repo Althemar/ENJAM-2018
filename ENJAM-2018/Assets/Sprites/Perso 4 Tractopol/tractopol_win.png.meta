@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 29e2df9caa6f9d84c9267fafe56e11d0
+guid: 2ca8a5fe89837ed4fbf55cf0625bab72
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Bodykun Idle_0
-    21300002: Bodykun Idle_1
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -42,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,64 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Bodykun Idle_0
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 75
-        width: 643
-        height: 852
-      alignment: 9
-      pivot: {x: 0.50386584, y: 0.5029177}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07c45406270a76f468c2502dec506f4d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bodykun Idle_1
-      rect:
-        serializedVersion: 2
-        x: 1078
-        y: 74
-        width: 758
-        height: 875
-      alignment: 9
-      pivot: {x: 0.49672085, y: 0.5085225}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9aebbcba9310c854b937337970395de7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 31913f1e8952f324da049a62bfd05d91
+    spriteID: f09a62dda9c254747945831f0090f678
     vertices: []
     indices: 
     edges: []

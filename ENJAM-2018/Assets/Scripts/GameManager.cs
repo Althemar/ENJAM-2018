@@ -75,7 +75,11 @@ namespace ENJAM2018
             for (int i = 0; i < NumberOfPlayers; i++) {
                 Player player = Instantiate(PlayerPrefab, Level.transform).GetComponent<Player>();
                 player.transform.position = new Vector3(0, yPos, 0);
+                
+
                 yPos -= spaceBetweenPlayers;
+
+
 
                 player.GetComponent<PlayerController>().Owner = (PlayerController.Players)playerId;
                 playerId++;
@@ -84,7 +88,9 @@ namespace ENJAM2018
                 Animator animator = player.GetComponent<Animator>();
                 if (selectedPlayers) {
                     animator.runtimeAnimatorController = (RuntimeAnimatorController)selectedPlayers.SelectedCharacters[i].animator;
+                    float scale = player.transform.localScale.x;
                     player.Character = selectedPlayers.SelectedCharacters[i];
+                    player.transform.localScale = new Vector3(scale * player.Character.adaptSize, scale * player.Character.adaptSize, 1);
 
                 }
                 else {

@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 67c3178b03296994f9307f65dc4845ab
+guid: 35eb9d1b014fc1e4e95ea21ce1279377
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tractopol_run_0
-    21300002: tractopol_run_1
-    21300004: tractopol_run_2
-    21300006: tractopol_run_3
+    21300000: tractopol_idle_0
+    21300002: tractopol_idle_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,81 +86,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tractopol_run_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 588
-        width: 926
-        height: 588
-      alignment: 9
-      pivot: {x: 0.52237135, y: 0.13594522}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9433230077910d344bb1fe739244ddc9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tractopol_run_1
-      rect:
-        serializedVersion: 2
-        x: 926
-        y: 588
-        width: 926
-        height: 588
-      alignment: 9
-      pivot: {x: 0.524857, y: 0.12420156}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1df1fd8802b42f4985c306d3d56e9f3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tractopol_run_2
+      name: tractopol_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 926
-        height: 588
+        width: 1000
+        height: 1000
       alignment: 9
-      pivot: {x: 0.52485704, y: 0.128116}
+      pivot: {x: 0.5223714, y: 0.40057176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0990bd396ed7ccd4ab4f62050167946f
+      spriteID: f36eb352652c2d740b76712622ea2280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tractopol_run_3
+      name: tractopol_idle_1
       rect:
         serializedVersion: 2
-        x: 926
+        x: 1000
         y: 0
-        width: 926
-        height: 588
+        width: 1000
+        height: 1000
       alignment: 9
-      pivot: {x: 0.5198856, y: 0.12420157}
+      pivot: {x: 0.5223715, y: 0.40057176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ddc4682e7b33a24a9f845e5399ff097
+      spriteID: 7e35ce0d5f82c6d45bacdeac67d7a69a
       vertices: []
       indices: 
       edges: []
@@ -170,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b4717dc8533b421418542068b6c6822a
+    spriteID: 8e6ddaf5f5c5372498b22d7f92958b10
     vertices: []
     indices: 
     edges: []

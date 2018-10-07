@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fe4f9030dd2ce4a9daad1b27a7b92f, type: 3}
-  m_Name: BodyKun
+  m_Name: Cat
   m_EditorClassIdentifier: 
-  name: Bodykun
-  sprite: {fileID: 21300002, guid: 99440eda8bc6d6e488606a69c25e6f52, type: 3}
-  animator: {fileID: 9100000, guid: 4d66f0e9775f46f4a9e69641abae690d, type: 2}
-  adaptSize: 0.7
-  uiAdaptSize: 125
+  name: Cat
+  sprite: {fileID: 21300000, guid: 64dba2d8ff7a83a4a986b78e9c298f5b, type: 3}
+  animator: {fileID: 9100000, guid: 565d21147c9d4c248bd642ac4db1a33c, type: 2}
+  adaptSize: 1.5
+  uiAdaptSize: 140

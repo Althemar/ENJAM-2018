@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc5ff3603a75d7418b3f614af4d5e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: {fileID: 114724947380631458}
   characterSprite: {fileID: 114902304010780468}
   characterButton: {fileID: 114260459907132908}
   JoinButton: {fileID: 21300000, guid: 4feb571b18aebf348928f6da9beb19f7, type: 3}
@@ -276,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.0069138384}
   m_AnchorMax: {x: 0.23711033, y: 1}
-  m_AnchoredPosition: {x: -224.7, y: -41}
+  m_AnchoredPosition: {x: -205.5, y: -41}
   m_SizeDelta: {x: 114.42, y: 119.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224781021478384534
