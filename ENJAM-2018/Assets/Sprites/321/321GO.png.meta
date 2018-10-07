@@ -1,0 +1,3963 @@
+fileFormatVersion: 2
+guid: 0f3f4eb44159ade45abf581a238c3737
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 321GO_0
+    21300002: 321GO_1
+    21300004: 321GO_2
+    21300006: 321GO_3
+    21300008: 321GO_4
+    21300010: 321GO_5
+    21300012: 321GO_6
+    21300014: 321GO_7
+    21300016: 321GO_8
+    21300018: 321GO_9
+    21300020: 321GO_10
+    21300022: 321GO_11
+    21300024: 321GO_12
+    21300026: 321GO_13
+    21300028: 321GO_14
+    21300030: 321GO_15
+    21300032: 321GO_16
+    21300034: 321GO_17
+    21300036: 321GO_18
+    21300038: 321GO_19
+    21300040: 321GO_20
+    21300042: 321GO_21
+    21300044: 321GO_22
+    21300046: 321GO_23
+    21300048: 321GO_24
+    21300050: 321GO_25
+    21300052: 321GO_26
+    21300054: 321GO_27
+    21300056: 321GO_28
+    21300058: 321GO_29
+    21300060: 321GO_30
+    21300062: 321GO_31
+    21300064: 321GO_32
+    21300066: 321GO_33
+    21300068: 321GO_34
+    21300070: 321GO_35
+    21300072: 321GO_36
+    21300074: 321GO_37
+    21300076: 321GO_38
+    21300078: 321GO_39
+    21300080: 321GO_40
+    21300082: 321GO_41
+    21300084: 321GO_42
+    21300086: 321GO_43
+    21300088: 321GO_44
+    21300090: 321GO_45
+    21300092: 321GO_46
+    21300094: 321GO_47
+    21300096: 321GO_48
+    21300098: 321GO_49
+    21300100: 321GO_50
+    21300102: 321GO_51
+    21300104: 321GO_52
+    21300106: 321GO_53
+    21300108: 321GO_54
+    21300110: 321GO_55
+    21300112: 321GO_56
+    21300114: 321GO_57
+    21300116: 321GO_58
+    21300118: 321GO_59
+    21300120: 321GO_60
+    21300122: 321GO_61
+    21300124: 321GO_62
+    21300126: 321GO_63
+    21300128: 321GO_64
+    21300130: 321GO_65
+    21300132: 321GO_66
+    21300134: 321GO_67
+    21300136: 321GO_68
+    21300138: 321GO_69
+    21300140: 321GO_70
+    21300142: 321GO_71
+    21300144: 321GO_72
+    21300146: 321GO_73
+    21300148: 321GO_74
+    21300150: 321GO_75
+    21300152: 321GO_76
+    21300154: 321GO_77
+    21300156: 321GO_78
+    21300158: 321GO_79
+    21300160: 321GO_80
+    21300162: 321GO_81
+    21300164: 321GO_82
+    21300166: 321GO_83
+    21300168: 321GO_84
+    21300170: 321GO_85
+    21300172: 321GO_86
+    21300174: 321GO_87
+    21300176: 321GO_88
+    21300178: 321GO_89
+    21300180: 321GO_90
+    21300182: 321GO_91
+    21300184: 321GO_92
+    21300186: 321GO_93
+    21300188: 321GO_94
+    21300190: 321GO_95
+    21300192: 321GO_96
+    21300194: 321GO_97
+    21300196: 321GO_98
+    21300198: 321GO_99
+    21300200: 321GO_100
+    21300202: 321GO_101
+    21300204: 321GO_102
+    21300206: 321GO_103
+    21300208: 321GO_104
+    21300210: 321GO_105
+    21300212: 321GO_106
+    21300214: 321GO_107
+    21300216: 321GO_108
+    21300218: 321GO_109
+    21300220: 321GO_110
+    21300222: 321GO_111
+    21300224: 321GO_112
+    21300226: 321GO_113
+    21300228: 321GO_114
+    21300230: 321GO_115
+    21300232: 321GO_116
+    21300234: 321GO_117
+    21300236: 321GO_118
+    21300238: 321GO_119
+    21300240: 321GO_120
+    21300242: 321GO_121
+    21300244: 321GO_122
+    21300246: 321GO_123
+    21300248: 321GO_124
+    21300250: 321GO_125
+    21300252: 321GO_126
+    21300254: 321GO_127
+    21300256: 321GO_128
+    21300258: 321GO_129
+    21300260: 321GO_130
+    21300262: 321GO_131
+    21300264: 321GO_132
+    21300266: 321GO_133
+    21300268: 321GO_134
+    21300270: 321GO_135
+    21300272: 321GO_136
+    21300274: 321GO_137
+    21300276: 321GO_138
+    21300278: 321GO_139
+    21300280: 321GO_140
+    21300282: 321GO_141
+    21300284: 321GO_142
+    21300286: 321GO_143
+    21300288: 321GO_144
+    21300290: 321GO_145
+    21300292: 321GO_146
+    21300294: 321GO_147
+    21300296: 321GO_148
+    21300298: 321GO_149
+    21300300: 321GO_150
+    21300302: 321GO_151
+    21300304: 321GO_152
+    21300306: 321GO_153
+    21300308: 321GO_154
+    21300310: 321GO_155
+    21300312: 321GO_156
+    21300314: 321GO_157
+    21300316: 321GO_158
+    21300318: 321GO_159
+    21300320: 321GO_160
+    21300322: 321GO_161
+    21300324: 321GO_162
+    21300326: 321GO_163
+    21300328: 321GO_164
+    21300330: 321GO_165
+    21300332: 321GO_166
+    21300334: 321GO_167
+    21300336: 321GO_168
+    21300338: 321GO_169
+    21300340: 321GO_170
+    21300342: 321GO_171
+    21300344: 321GO_172
+    21300346: 321GO_173
+    21300348: 321GO_174
+    21300350: 321GO_175
+    21300352: 321GO_176
+    21300354: 321GO_177
+    21300356: 321GO_178
+    21300358: 321GO_179
+    21300360: 321GO_180
+    21300362: 321GO_181
+    21300364: 321GO_182
+    21300366: 321GO_183
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 321GO_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6c6f47f1932174190471ba241a1c0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_1
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5150ec95be272e468e240b704a67517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_2
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b365a953c72aa046821e3d147105fe7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_3
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f27045a1f17dc46899c3ec35bd51e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_4
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2590d2f42d2342849965e55050d4738d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_5
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008260be7e2296b468cdc2fca36e3610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_6
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6febb62f69759804996ee1a5ff98bc20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_7
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 11000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317a0489f52ae4a4aa8233e258717eff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6b3f7eb7457454bbc12ab1520b7140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_9
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef62595297279f40a6abb515a5a33f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_10
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6a9d717b21df745b05159990b2f489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_11
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba9ac6a84b9d2a4eabc3c16d246cccd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_12
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea837054d0426d40ad2507d2e82a599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_13
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a168cc4b94fbd894487071be0dc4f227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_14
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379cc7fd957f84a45be98b3456377936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_15
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 10500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144fc0be5e5257c41b361b5ea807ec9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfaa7611a24b6246a0073f0635e6e80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_17
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7b9743a9eebb54c9e1b14436799d67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_18
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e14b54240a74c418fae474976a60c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_19
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d42687cbd5cf04d8714eaba096cf0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_20
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3956c8f6cca304c49bbcebfcfeac4ac1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_21
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686c62a727234be4d9e86f648bcbfab2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_22
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0a08fb10d59b14fbd153d354226171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_23
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 10000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ff42bda3ad42940a2794540c8f08c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b7e2217b2c108499a796a6178875f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_25
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2befec7f95b46a74e892b851dde027fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_26
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37599cb6f7899547aabd4bd34f3f6d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_27
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dbf5aa096b2bf4f884f3743b91f98d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_28
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96319a75f18713040b3ae95aa53aaf30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_29
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62867d8dda12d624f96d690335d84cd0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_30
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f5c84275419694697b2b05534b1648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_31
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 9500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7843ce94220127a47a2e3dabd0fa2ebd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5cf520cd648bc40a9acb28ba45a60c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_33
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80d3df9d15907741ae37ee20f673cfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_34
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbbdd10c306ef74d899302ed872e28a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_35
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77b462ec0c066047b0a9992c7b38207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_36
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ce619c0477b6549943ca7a3dfd9e44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_37
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25381305d7d72b4f91ba009a0a78688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_38
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bd6bfad6a75f045a47a3af532507eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_39
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 9000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df80000cd2befb43a02b72e60581edb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a16a43ded95945438a828587915cdde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_41
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecf620579385f64186b46dc74b25d86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_42
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad8194e186e34047bdd8ce668045c46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_43
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1037ac3da4d3647bd9aff7f7b53263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_44
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d80ca449bf5cc94297fc992e21a6c1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_45
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46dd1dd2663bd34d8179b7bf2085736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_46
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a603bbba7d5121b4bb119b49d2000a81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_47
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 8500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c8f0f32e88b334c8733b19b559b5bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693d688cecedacc43af246991a115ebb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_49
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3221e0c999019f949bb98747c5ca5d34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_50
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d364c0d563c8aa45869b2d28221d0de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_51
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884a4702cd089da41aa6792623d76f8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_52
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851fbe26dfb372942a7f032e0e72cbcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_53
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d95eacd63753843902bfd10a16de08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_54
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5f6abc46611e342ab8ac94272b703c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_55
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 8000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a69ad6054eede41aa9ce8928568a7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9305d14f59b9e9e41a96992886922a5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_57
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1db662693511c409956eb8ca6796de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_58
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf8475a1e45d5041a36c8835e34c37f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_59
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc88889cacb85e40af144c245938841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_60
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d8e601224e6b54eace871a89a1b49a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_61
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbaf9b0d91d37a4f971f14ebfe4c9aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_62
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a023e9ee9a95cd344ad9e5711234b2ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_63
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 7500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d730e99f7a650464383457e8d015d481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e583c54ed77ff4ba64c3144d7d2c13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_65
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd3bc55d59285c46b4534512e831f27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_66
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f0812fe82c1c24e9f8b9764d3f8195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_67
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef480d69c8fce0044b0818bc5053a9a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_68
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0b993ea3a659b408aa8508e1c15c9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_69
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0693fe9bb30890d4c877b2e6359d55d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_70
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b111878ae6241846bbef1e3d3f2ddd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_71
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 7000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d744a1a3c8e8942a3fabcd01b72523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262b5f46732bfd64aa2da02de8843b3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_73
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b481a4b60bbcee47b251c25eec1ce3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_74
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16d06e879718c943a5b2681e4961f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_75
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619447793503a55408cb649a055b5bf2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_76
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1856b29eb057c184dad66fcc66877eb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_77
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96d311d586f3a348af1c19db3ac423c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_78
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cfe2ca3b022414aba1d0db1522909d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_79
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 6500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8fee424aa4a504ebc187a1e3a86d4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3608142df1844ed419d5728b54a50c53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_81
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010dc83efc859b347b5fcc2311092332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_82
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc4fda13d7872d4782202dc8daa0301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_83
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112ddbcc6c0cb34459b08ad9292d6001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_84
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0368bb2558eb17e4aa6cb9b6331a493b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_85
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66136ed5236fa564199d07dc0b849314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_86
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d18b22609c6d6241866a75fda0bfc79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_87
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 6000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa22a7415c48f64c83f3c5723bd9a73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb5705cdbdb2f940b5215627ffe488d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_89
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748ae7d99ce7e3b408e6ecfe910268c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_90
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f86c3bca30323d47b385f8b1c6508f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_91
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b30079a9d2d3c740a3fb06f2304a873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_92
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f480544e18ad44ba5e898a8a2dac24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_93
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f464382dff4c53243bf9759bcb948ad9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_94
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab2f5dc1258d0d4b8c8d26bca96d9ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_95
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 5500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6139d40b2768a524aa01c13f7cd0cc7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065c951e5804169458ea514bfaf2da21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_97
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba8710c4af8d094b988a49a3236ebdb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_98
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80389d4f04648d40bb1f9855dbc8b10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_99
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce752cf1277fb184b8ba50f49ab810c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_100
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d185a735157c30742a032e709f58dbf0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_101
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae652995357017c4ebddd17bbf263b7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_102
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd35f5034eda6f5479f533d5ffe46ad2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_103
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 5000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a171a3d9ec985a9448d0057ce0f57f23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a5408af4a674b4ebc50ee2ae7dd96c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_105
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c4d05d9f13c474898ce0edf9820d8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_106
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ae0124aaddca148958c110103bd754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_107
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b057e8675344f47864ab33c226d37e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_108
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eeecd3b556112b4497806dfd93bf260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_109
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45938b1ed6d2f094e88c74f00618c53e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_110
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbc5e67f27c474449b96735557f9a19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_111
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 4500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d45f2f20fde93498e43610720717c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149f9e7966d816c4fbf2a96f1742db36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_113
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43afcc79ba91f5f48b38dd46a85a57f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_114
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189c7d3e44f7afb468b8d57c14543e0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_115
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8298a173801ac614e9df3e86f2bdabcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_116
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27bc644756db78469a5e589d638e6bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_117
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9ce973b8e9f7347b07ef82623d7607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_118
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e9332f9e8e8e446bae157817fcf90c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_119
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 4000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff834e8fc8fc9342be3319c18c72352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cd3eda891025547867db88f4903bcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_121
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483102071a00d644dbd4aa0f9371e0bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_122
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b015be1af97b245a0ee770fe404741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_123
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be323b9f56f59b4aae12b7c55a67105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_124
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73da673c8d03e048a7b4513694d5d92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_125
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d782292b18919438929ca00106b9da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_126
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba246dbb36b719c478fcd920a8459e1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_127
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 3500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4af9b98236589c46971e3318d6043f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56133711cb1f49142830df65cadf012a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_129
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137974a906bd6674ead43c09938632ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_130
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f148994f1d2fd43bde4f09b5fb2b7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_131
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43625cb70c864404490abbdaeeb65b87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_132
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9fb0a5741f4934c8e361aa5c5a340c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_133
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dc60bcb8c63944480516ba241c4b6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_134
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376f50a2a5ddcee4e8dbec0454d409ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_135
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 3000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa0f910bc47cc341952352302745d01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57186cbda67c5d241b6fa94779af0a47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_137
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af83a75c541f8e848814a23f8b6b48d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_138
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea4621ea675bc94489b7a9914ef143a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_139
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a5913c4e199fe4497028784bfd8759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_140
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779f5ccc9a0322f488c4005d8e2f99b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_141
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f03cd22b27d9b847b17068ac71737b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_142
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31cff50e8d79b443b6a473fb9b76de4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_143
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 2500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435500945cbd11545a9c057c3d36448a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebec255a629390145a9bf2f4d86949fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_145
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b27b9a635d4464f8384e17a03028f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_146
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638764241d47d204ebe931253c0f2bd4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_147
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cac580ee10b67846bedcde181faed83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_148
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26a136b9ee65e6498d8ce6279ec3acd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_149
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d44dc6848764c4abf1d50efa7429ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_150
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513394e3d09b30b4997caea72b644a83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_151
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 2000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba46c441f552d5f4cb4fc4331f54cf21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dd407d9587b7f4b9a5a32357286323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_153
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa7be2aad3068e4581c83388962bf3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_154
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0e3e6ec6148364496c8fb96463d25f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_155
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38490cb663fe8a846866fddc45727435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_156
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2955ac2734ff6e44692f42c567496bfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_157
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbfced60cc2a864895dad3980b32453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_158
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1636f6711eb2a9e42939c86589573f4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_159
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 1500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e578c6a2665bfc84481c07d1caf2d44c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6063683f881f94cbf654f3c833e541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_161
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5c9192d0a106a4085779f6619cd8ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_162
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dcdd1cb0d676945aa03a6795c5a417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_163
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a496889951fae8c47b4124b4a60f612d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_164
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d161809bb4d7ca488ad1a6587a61558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_165
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3a299df6e02744a9c68537b605a244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_166
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a679ea7037cfe524f80766b61f66fd15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_167
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 1000
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0544521d00fa7b8428f3c6cd9aca441b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece1cfd8f33ea3c4b87e68be63c70731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_169
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9176803e665d04ea30e4465fc243af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_170
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7531128fb18f75242b4f9b090edcc0d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_171
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca9459df816cbe4ca782db1561b945f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_172
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6139a2b465171cf45b386488d8932416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_173
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c50a8d50d4ecad4e960c9e5808ef0b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_174
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2971ee1a2e1aa1a479602ffc0d85b82d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_175
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 500
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24cfa0908a30e8842987f9f49a8e61ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50d9651b18af2c4fb4b40d8dd922b27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_177
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057a3e3b2b7360543a6c5f9860355401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_178
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1197825d669a7c74e997180976c09ddc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_179
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cc2c1a3d83a5d41bdcead885a644ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_180
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ae17abde2295a43be3a426d2634b6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_181
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e5b425f9b8fb441b47bf2c6ab131ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_182
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5486e4acdee9c714ab0eeec9bdf2e9d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 321GO_183
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 0
+        width: 890
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01480e331debf3478c42b71ea12bc6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4e42529dc1e5e1d4486051510afe19a0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -43,6 +43,8 @@ namespace ENJAM2018
             else {
                 Destroy(gameObject);
             }
+            SoundManager.Instance.PlayUnlocalized("Game");
+
         }
 
 
