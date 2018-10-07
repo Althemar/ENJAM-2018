@@ -470,12 +470,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreKeeper: {fileID: 1407841715}
   testAnimator: {fileID: 9100000, guid: 4d66f0e9775f46f4a9e69641abae690d, type: 2}
-  NumberOfPlayers: 4
   PlayerPrefab: {fileID: 1473727422878524, guid: 13811de268d48f442a2745d5cbd28c6f,
     type: 2}
   PlayerScoreUIPrefab: {fileID: 1030430946952000, guid: a8002357f124ea14d901e1f7b3c2e4ce,
     type: 2}
   Level: {fileID: 518032543}
+  NumberOfPlayers: 4
   spaceBetweenPlayers: 1
 --- !u!1 &541198842
 GameObject:
