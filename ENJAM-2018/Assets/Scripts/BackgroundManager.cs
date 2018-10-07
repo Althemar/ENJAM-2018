@@ -67,14 +67,14 @@ namespace ENJAM2018 {
 
 		private void GenerateRightSprite(BackgroundLayer layer) {
 			GameObject go = Instantiate(layer.renderers[0].gameObject, layer.transf);
-			go.transform.position = new Vector3(layer.renderers[layer.renderers.Length - 2].transform.position.x + layer.spriteWidth, layer.renderers[layer.renderers.Length - 2].transform.position.y);
+			go.transform.position = new Vector3(layer.renderers[layer.renderers.Length - 2].transform.position.x + layer.spriteWidth, layer.renderers[layer.renderers.Length - 2].transform.position.y, layer.renderers[layer.renderers.Length - 2].transform.position.z);
 			layer.renderers[layer.renderers.Length - 1] = go.GetComponent<SpriteRenderer>();
 		}
 
 		private void GenerateAllSprites(BackgroundLayer layer) {
 			for (int i = 0; i < layer.renderers.Length; i++) {
 				GameObject go = Instantiate(layer.spriteRenderer.gameObject, layer.transf);
-				go.transform.position = new Vector3(layer.spriteRenderer.transform.position.x + layer.spriteWidth * i, layer.spriteRenderer.transform.position.y);
+				go.transform.position = new Vector3(layer.spriteRenderer.transform.position.x + layer.spriteWidth * i, layer.spriteRenderer.transform.position.y, layer.spriteRenderer.transform.position.z);
 				layer.renderers[i] = go.GetComponent<SpriteRenderer>();
 			}
 		}
