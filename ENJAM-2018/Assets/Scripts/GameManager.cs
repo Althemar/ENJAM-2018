@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 
 namespace ENJAM2018
 {
@@ -12,7 +11,7 @@ namespace ENJAM2018
 
         public ScoreKeeper scoreKeeper;
 
-        public AnimatorController testAnimator;
+        public RuntimeAnimatorController testAnimator;
 
                                 
         public GameObject PlayerPrefab;
@@ -52,7 +51,9 @@ namespace ENJAM2018
             SelectedPlayersKeeper selectedPlayers = null;
           
             if (selectedPlayersGo) {
-                selectedPlayers = GetComponent<SelectedPlayersKeeper>();
+                selectedPlayers = selectedPlayersGo.GetComponent<SelectedPlayersKeeper>();
+                Debug.Log(selectedPlayers);
+                Debug.Log(selectedPlayers.SelectedCharacters);
                 NumberOfPlayers = selectedPlayers.SelectedCharacters.Count;
             }
            
