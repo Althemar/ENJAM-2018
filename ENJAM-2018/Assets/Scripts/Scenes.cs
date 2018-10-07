@@ -9,9 +9,7 @@ public class Scenes : MonoBehaviour {
         UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
     }
 
-    public void Quit(string scene)
-    {
-        Debug.Log("Changed to scene: " + scene);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+    public void Quit() {
+		Application.Quit();
     }
 }
