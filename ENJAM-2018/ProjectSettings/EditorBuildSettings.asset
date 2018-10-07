@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: cecb2b23f0a52a743b178b1e1d26057d
   - enabled: 1
-    path: Assets/Scenes/LeadderBoard.unity
+    path: Assets/Scenes/LeaderBoard.unity
     guid: eb8da7db81537f940a4536bce91c50a1
   - enabled: 1
     path: Assets/Scenes/ReadyPlayers.unity
     guid: f0351399f25b3be4884e55b5a1941e62
+  - enabled: 1
+    path: Assets/Scenes/damien_scene.unity
+    guid: 56d3c29329590c246815c982fa907cff
   m_configObjects: {}
