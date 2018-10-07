@@ -39,7 +39,7 @@ namespace ENJAM2018 {
 
 			GenerateAllTiles();
 
-			if (ground = null) {
+			if (ground == null) {
 				Debug.LogWarning("No ground object set!");
 			} else {
 				grounds = new GameObject[2];
@@ -65,7 +65,7 @@ namespace ENJAM2018 {
 			}
 
 			// Ground
-			if (ground = null) {
+			if (ground == null) {
 				Debug.LogWarning("No ground object set!");
 			}
 			else {
