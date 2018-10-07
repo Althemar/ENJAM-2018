@@ -29,7 +29,7 @@ namespace ENJAM2018
             ending
         }
 
-        GameStates gameState = GameStates.playing;
+        GameStates gameState = GameStates.beginning;
 
         public GameStates GameState
         {
@@ -43,6 +43,8 @@ namespace ENJAM2018
             else {
                 Destroy(gameObject);
             }
+            SoundManager.Instance.PlayUnlocalized("Game");
+
         }
 
 

@@ -14,6 +14,8 @@ namespace ENJAM2018
         ScoreKeeper scoreKeeper;
 
         void Start() {
+
+            SoundManager.Instance.PlayUnlocalized("Podium");
             
             scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 
