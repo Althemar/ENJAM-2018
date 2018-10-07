@@ -8,6 +8,7 @@ namespace ENJAM2018
     public class PlayerScoreUI : MonoBehaviour
     {
 
+        public Text playerName;
         public Text scoreText;
         public Text multiplicatorText;
         public Text comboText;
@@ -15,6 +16,12 @@ namespace ENJAM2018
 
         Player player;
         string playerString;
+
+        Animator animator;
+
+        private void Start() {
+            animator = multiplicatorText.GetComponent<Animator>();
+        }
 
         public Player Player
         {
@@ -28,15 +35,24 @@ namespace ENJAM2018
             set { playerString = value; }
         }
 
+        public void SetName(string name) {
+            playerName.text = name;
+        }
+
         public void SetScore(int score) {
-            scoreText.text = "Player " + playerString + " : " + score.ToString();
+            scoreText.text = score.ToString();
         }
 
         public void SetMultiplicator(int multiplicator) {
             multiplicatorText.text = " x " + multiplicator.ToString();
+            if (multiplicator != 1) {
+                animator.SetTrigger("MultiplicatorUp");
+            }
+            else {
+                animator.SetTrigger("MultiplicatorDecrease");
+            }
         }
         
-
         public void SetCombo(int combo) {
             comboText.text = "Combo : " + combo.ToString();
             comboFillingImage.fillAmount = combo / 10f;

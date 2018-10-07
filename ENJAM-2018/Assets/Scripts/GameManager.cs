@@ -12,6 +12,7 @@ namespace ENJAM2018
         public ScoreKeeper scoreKeeper;
 
         public RuntimeAnimatorController testAnimator;
+        public Character testCharacter;
 
                                 
         public GameObject PlayerPrefab;
@@ -83,10 +84,15 @@ namespace ENJAM2018
                 Animator animator = player.GetComponent<Animator>();
                 if (selectedPlayers) {
                     animator.runtimeAnimatorController = (RuntimeAnimatorController)selectedPlayers.SelectedCharacters[i].animator;
+                    player.Character = selectedPlayers.SelectedCharacters[i];
+
                 }
                 else {
                     animator.runtimeAnimatorController = (RuntimeAnimatorController) testAnimator;
+                    player.Character = testCharacter ;
+
                 }
+
 
                 PlayersManager.Instance.Players.Add(player);
             }
@@ -94,6 +100,11 @@ namespace ENJAM2018
             if (selectedPlayers) {
                 Destroy(selectedPlayersGo);
             }
+        }
+
+        public void KillPlayer(Player player) {
+            scoreKeeper.AddScore(player);
+            EndGame();
         }
 
         public void EndGame() {
@@ -106,9 +117,6 @@ namespace ENJAM2018
 
             UIManager.Instance.DisplayEndingText();
             StartCoroutine(LoadingLeaderboard());
-
-            scoreKeeper.RecordScore();
-
         }
 
         public IEnumerator LoadingLeaderboard() {
