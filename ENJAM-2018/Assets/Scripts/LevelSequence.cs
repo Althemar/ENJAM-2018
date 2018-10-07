@@ -7,18 +7,23 @@ namespace ENJAM2018 {
 
 		[SerializeField] private Camera mainCamera;
 		[SerializeField] private float tileSize = 2f;
+		[SerializeField] private float tileLineYPos = -3f;
 		public float speed = 2f;
 		[Header("Temporary")]
 		[SerializeField] private GameObject prefabUp;
 		[SerializeField] private GameObject prefabRight;
 		[SerializeField] private GameObject prefabDown;
 		[SerializeField] private GameObject prefabLeft;
+		[SerializeField] private GameObject ground;
+		[SerializeField] private float groundWidth; // The ground must be wider than the screen
 		
 		public SequenceTile[] Tiles { get; private set; }
 		public Rect cameraBounds { get; private set; }
 		public float distanceTravelled { get; private set; }
 		private SequenceGenerator generator;
 		private PhaseManager phaseManager;
+		private GameObject[] grounds;
+		private int activeGrounds = 1;
 
 		private void Awake() {
 			phaseManager = PhaseManager.I;
@@ -34,6 +39,13 @@ namespace ENJAM2018 {
 			SequenceInput.Init(prefabUp, prefabRight, prefabDown, prefabLeft);
 
 			GenerateAllTiles();
+
+			if (ground == null) {
+				Debug.LogWarning("No ground object set!");
+			} else {
+				grounds = new GameObject[2];
+				grounds[0] = ground;
+			}
 		}
 
 		private void Start() {
@@ -51,6 +63,19 @@ namespace ENJAM2018 {
 			for (int i = 0; i < tilesOutCount; i++) {
 				DeleteLeftTile();
 				GenerateRightTile();
+			}
+
+			// Ground
+			if (activeGrounds == 2 && grounds[0].transform.position.x < cameraBounds.xMin - 3f) {
+				Destroy(grounds[0]);
+				grounds[0] = grounds[1];
+				activeGrounds = 1;
+			}
+			else if (activeGrounds == 1 && grounds[0].transform.position.x < cameraBounds.xMax + 3f) {
+				grounds[1] = Instantiate(grounds[0], grounds[0].transform.parent);
+				grounds[1].name = grounds[0].name;
+				grounds[1].transform.localPosition = new Vector3(grounds[0].transform.localPosition.x + groundWidth, grounds[0].transform.localPosition.y, grounds[0].transform.localPosition.z);
+				activeGrounds = 2;
 			}
 		}
 
@@ -90,7 +115,7 @@ namespace ENJAM2018 {
 			GameObject go = Instantiate(input.prefab, transform);
 			SequenceTile tile = go.GetComponent<SequenceTile>();
 			tile.requiredInput = input;
-			go.transform.localPosition = new Vector3(distanceFromStart, 0f);
+			go.transform.localPosition = new Vector3(distanceFromStart, tileLineYPos);
 			return tile;
 		}
 

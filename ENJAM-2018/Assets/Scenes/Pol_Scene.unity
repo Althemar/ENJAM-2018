@@ -9777,6 +9777,8 @@ MonoBehaviour:
     type: 2}
   prefabDown: {fileID: 1455064947962380, guid: d5644f2832643a24bb10292660ba21c5, type: 2}
   prefabLeft: {fileID: 1455064947962380, guid: 35bbf9c393c7dcf4b98bf1afa13e1e54, type: 2}
+  ground: {fileID: 0}
+  groundWidth: 0
 --- !u!114 &518032546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9830,12 +9832,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreKeeper: {fileID: 1407841715}
   testAnimator: {fileID: 9100000, guid: 4d66f0e9775f46f4a9e69641abae690d, type: 2}
-  NumberOfPlayers: 4
+  testCharacter: {fileID: 0}
   PlayerPrefab: {fileID: 1473727422878524, guid: 13811de268d48f442a2745d5cbd28c6f,
     type: 2}
   PlayerScoreUIPrefab: {fileID: 1030430946952000, guid: a8002357f124ea14d901e1f7b3c2e4ce,
     type: 2}
   Level: {fileID: 518032543}
+  NumberOfPlayers: 4
   spaceBetweenPlayers: 1
 --- !u!1 &541198842
 GameObject:
