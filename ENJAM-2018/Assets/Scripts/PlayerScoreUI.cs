@@ -53,7 +53,6 @@ namespace ENJAM2018
             }
         }
         
-
         public void SetCombo(int combo) {
             comboText.text = "Combo : " + combo.ToString();
             comboFillingImage.fillAmount = combo / 10f;
