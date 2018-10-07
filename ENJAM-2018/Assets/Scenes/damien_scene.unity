@@ -470,12 +470,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreKeeper: {fileID: 1407841715}
   testAnimator: {fileID: 9100000, guid: 4d66f0e9775f46f4a9e69641abae690d, type: 2}
-  NumberOfPlayers: 4
   PlayerPrefab: {fileID: 1473727422878524, guid: 13811de268d48f442a2745d5cbd28c6f,
     type: 2}
   PlayerScoreUIPrefab: {fileID: 1030430946952000, guid: a8002357f124ea14d901e1f7b3c2e4ce,
     type: 2}
   Level: {fileID: 518032543}
+  NumberOfPlayers: 2
   spaceBetweenPlayers: 1
 --- !u!1 &541198842
 GameObject:
@@ -660,7 +660,7 @@ Animator:
   m_GameObject: {fileID: 792613657}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d66f0e9775f46f4a9e69641abae690d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 565d21147c9d4c248bd642ac4db1a33c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -704,12 +704,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29e2df9caa6f9d84c9267fafe56e11d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b122d6c17ddd454fb54e017b6569b00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.43, y: 8.52}
+  m_Size: {x: 5.28, y: 8.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

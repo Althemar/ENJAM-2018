@@ -28,6 +28,7 @@ namespace ENJAM2018
         private LevelSequence level;
 		private ParticleSystem particleSystemDash;
 		private ParticleSystem particleSystemFail;
+		private ParticleSystem particleSystemCombo;
 
 		public bool Lost
         {
@@ -49,6 +50,7 @@ namespace ENJAM2018
         private void Start() {
 			particleSystemDash = transform.Find("ParticlesDash").GetComponent<ParticleSystem>();
 			particleSystemFail = transform.Find("ParticlesFail").GetComponent<ParticleSystem>();
+			particleSystemCombo = transform.Find("ParticlesCombo").GetComponent<ParticleSystem>();
 			ParticleSystem.MainModule mainMod = particleSystemDash.main;
 			mainMod.simulationSpace = ParticleSystemSimulationSpace.Custom;
 			mainMod.customSimulationSpace = transform.parent;
@@ -110,12 +112,12 @@ namespace ENJAM2018
             if (goForward) {
                 tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
-				particleSystemDash.Emit(1);
+				particleSystemDash.Emit(1); // Particles
             }
             else {
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
-				particleSystemFail.Play();
+				particleSystemFail.Play(); // Particles
             }
             tile.AddPlayerOnTile(this);
         }
@@ -138,7 +140,8 @@ namespace ENJAM2018
                 combo = 0;
                 scoreMultiplicator++;
                 scoreUI.SetMultiplicator(scoreMultiplicator);
-            }
+				particleSystemCombo.Play(); // Particles
+			}
         }
 
         public void CheckInput(int keyId) {
@@ -146,7 +149,7 @@ namespace ENJAM2018
                 return;
             }
 
-            if (keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
+            if (tile.next != null && keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
                 Move(true);
                 IncreaseScore();
             }
