@@ -1673,10 +1673,11 @@ MonoBehaviour:
   backgroundLayers: []
   availableSprites:
   - {fileID: 21300000, guid: 5a25d1b80e3c2434fa103beb89754d45, type: 3}
-  - {fileID: 21300000, guid: 8ef59595303abfc4b9e27c80ab3264c2, type: 3}
+  - {fileID: 21300000, guid: 5ccba7337544348c3b323630e1a26039, type: 3}
   - {fileID: 21300000, guid: db87a1da6b03c4d40aa8553ab81bdf36, type: 3}
   - {fileID: 21300000, guid: d512f72599894ca46a600b56fc34496c, type: 3}
   - {fileID: 21300000, guid: 32ed7ca9725653746a7060b5b16d0c06, type: 3}
+  - {fileID: 21300000, guid: ccbe2c4b27b20e44c8e41e64c9439a15, type: 3}
   relativeSpeed: -1
 --- !u!4 &674755930
 Transform:
@@ -4168,7 +4169,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1743828922
