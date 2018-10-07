@@ -15,6 +15,7 @@ public class ReadyPlayers : MonoBehaviour {
 
     public Button validationButton;
 
+
     public SelectedPlayersKeeper selectedPlayersKeeper;
 
     void Start () {
