@@ -29,7 +29,7 @@ namespace ENJAM2018
             ending
         }
 
-        GameStates gameState = GameStates.playing;
+        GameStates gameState = GameStates.beginning;
 
         public GameStates GameState
         {

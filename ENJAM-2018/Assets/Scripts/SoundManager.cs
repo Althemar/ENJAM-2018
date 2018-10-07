@@ -18,6 +18,8 @@ namespace ENJAM2018 {
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                source = GetComponent<AudioSource>();
+
                 DontDestroyOnLoad(gameObject);
             }
             else {
@@ -28,11 +30,11 @@ namespace ENJAM2018 {
         public void Start() {
             
 			transform.position = Camera.main.transform.position;
-			source = GetComponent<AudioSource>();
 		}
 
 		public void PlayUnlocalized(string name) {
 			AudioAsset asset = GetAsset(name);
+            source.Stop();
 			source.PlayOneShot(asset.clip);
 		}
 
