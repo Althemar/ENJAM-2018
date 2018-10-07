@@ -71,7 +71,7 @@ namespace ENJAM2018
         }
 
 		private void Update() {
-			if (Input.GetKeyDown(KeyCode.A)) {
+			if (Input.GetKeyDown(KeyCode.A) && tile.next != null) {
 				Move(true);
 				IncreaseScore();
 			}
@@ -85,7 +85,7 @@ namespace ENJAM2018
 			}
 			particleSystemDash.SetParticles(particles, particles.Length);
 			
-            if (!playing || GameManager.Instance.GameState == GameManager.GameStates.ending) {
+            if (!playing || lost || GameManager.Instance.GameState == GameManager.GameStates.ending) {
                 return;
             }
 
@@ -110,11 +110,13 @@ namespace ENJAM2018
 
             tile.RemovePlayerFromTile(this);
             if (goForward) {
+				if (tile.next == null) return;
                 tile = tile.next;
                 moveSpeed = playerManager.DashSpeed;
 				particleSystemDash.Emit(1); // Particles
             }
             else {
+				if (tile.previous == null) return;
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;
 				particleSystemFail.Play(); // Particles
