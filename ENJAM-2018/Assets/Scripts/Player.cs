@@ -23,6 +23,7 @@ namespace ENJAM2018
         PlayerController playerController;
         CameraShake cameraShake;
         Animator animator;
+        Character character;
 
         private SequenceTile tile;
         private LevelSequence level;
@@ -45,6 +46,12 @@ namespace ENJAM2018
         {
             get { return score; }
             set { score = value; }
+        }
+
+        public Character Character
+        {
+            get { return character; }
+            set { character = value; }
         }
         
         private void Start() {
@@ -164,7 +171,7 @@ namespace ENJAM2018
 
         public void Lose() {
             lost = true;
-            GameManager.Instance.EndGame();
+            GameManager.Instance.KillPlayer(this);
         }
 
     }
