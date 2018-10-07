@@ -48,6 +48,9 @@ namespace ENJAM2018
             if (multiplicator != 1) {
                 animator.SetTrigger("MultiplicatorUp");
             }
+            else {
+                animator.SetTrigger("MultiplicatorDecrease");
+            }
         }
         
 
