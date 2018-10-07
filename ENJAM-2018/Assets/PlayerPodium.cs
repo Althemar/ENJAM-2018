@@ -17,10 +17,12 @@ namespace ENJAM2018
             gameObject.SetActive(false);
         }
 
-        public void SetPodium(int score, Character character) {
+        public void SetPodium(Character character, int score = -1) {
             gameObject.SetActive(true);
             PlayerNameText.text = character.name;
-            PlayerScoreText.text = "Score : " + score;
+            if (score != -1) {
+                PlayerScoreText.text = "Score : " + score;
+            }
             CharacterImage.sprite = character.sprite;
         }
     }

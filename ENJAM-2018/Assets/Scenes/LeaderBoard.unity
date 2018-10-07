@@ -1253,6 +1253,13 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -30.065006
       objectReference: {fileID: 0}
+    - target: {fileID: 114866926467732828, guid: 0ec40a5709452904ba6356b07558ae67,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Loser
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec40a5709452904ba6356b07558ae67, type: 2}
   m_IsPrefabAsset: 0

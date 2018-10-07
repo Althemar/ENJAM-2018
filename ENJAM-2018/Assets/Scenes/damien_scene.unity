@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 141849067}
   tileSize: 1.3
-  tileLineYPos: -0.5
+  tileLineYPos: -1.1
   speed: 2
   prefabUp: {fileID: 1455064947962380, guid: c9e352801d6a5874797882754116d8d0, type: 2}
   prefabRight: {fileID: 1455064947962380, guid: 6552ff043a2b1b946a9feddae71d3a1e,

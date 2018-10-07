@@ -14,12 +14,15 @@ namespace ENJAM2018 {
 
         List<Player> playersOnTile;
 
+        SpriteRenderer spriteRenderer;
+
 		public SequenceTile(SequenceInput required) {
 			requiredInput = required;
 		}
 
         public void Awake() {
             playersOnTile = new List<Player>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void OnDestroy() {
@@ -30,10 +33,14 @@ namespace ENJAM2018 {
 
         public void AddPlayerOnTile(Player player) {
             playersOnTile.Add(player);
+            spriteRenderer.sprite = imagePlayerOnTile;
         }
 
         public void RemovePlayerFromTile(Player player) {
             playersOnTile.Remove(player);
+            if (playersOnTile.Count == 0) {
+                spriteRenderer.sprite = imageNoPlayerOnTile;
+            }
         }
     }
 }
