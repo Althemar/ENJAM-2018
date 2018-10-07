@@ -17,15 +17,5 @@ namespace ENJAM2018
 
         public List<KeyMapping> keyMapping;
 
-        public static ControllerMapping Instance;
-
-        private void Awake() {
-            if (Instance == null) {
-                Instance = this;
-            }
-            else {
-                Destroy(gameObject);
-            }
-        }
-    }
+	}
 }
