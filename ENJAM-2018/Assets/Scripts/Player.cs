@@ -149,7 +149,7 @@ namespace ENJAM2018
                 return;
             }
 
-            if (keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
+            if (tile.next != null && keyId == tile.next.requiredInput.inputKey && level.TilePosition(tile) < 10) {
                 Move(true);
                 IncreaseScore();
             }
