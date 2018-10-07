@@ -7,7 +7,7 @@ namespace ENJAM2018 {
 
 		[SerializeField] private Camera mainCamera;
 		[SerializeField] private float tileSize = 2f;
-		[SerializeField] private float speed = 2f;
+		public float speed = 2f;
 		[Header("Temporary")]
 		[SerializeField] private GameObject prefabUp;
 		[SerializeField] private GameObject prefabRight;
@@ -15,7 +15,7 @@ namespace ENJAM2018 {
 		[SerializeField] private GameObject prefabLeft;
 		
 		public SequenceTile[] Tiles { get; private set; }
-		private Rect cameraBounds;
+		public Rect cameraBounds { get; private set; }
 		public float distanceTravelled { get; private set; }
 		private SequenceGenerator generator;
 		private PhaseManager phaseManager;
