@@ -9,6 +9,9 @@ namespace ENJAM2018 {
 		[NonSerialized] public SequenceTile previous;
 		[NonSerialized] public SequenceTile next;
 
+        public Sprite imageNoPlayerOnTile;
+        public Sprite imagePlayerOnTile;
+
         List<Player> playersOnTile;
 
 		public SequenceTile(SequenceInput required) {
