@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -17,3 +17,5 @@ MonoBehaviour:
   animator: {fileID: 9100000, guid: 817913cb3b73afe439fc99e09731d7a2, type: 2}
   adaptSize: 0.7
   uiAdaptSize: 125
+  selectionSound: {fileID: 8300000, guid: ff80ea3662fdb864f92a5e3d1543b6db, type: 3}
+  winSound: {fileID: 8300000, guid: 767b14244899e124b9965d6bc1cfbbb3, type: 3}

@@ -9,11 +9,9 @@ namespace ENJAM2018
         // Use this for initialization
         void Start() {
             SoundManager.Instance.PlayUnlocalized("Menu");
+            GetComponent<AudioSource>().PlayDelayed(1);
         }
 
-        // Update is called once per frame
-        void Update() {
-
-        }
+        
     }
 }

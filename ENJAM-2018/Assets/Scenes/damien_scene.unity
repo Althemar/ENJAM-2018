@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69279d584f631f34c9d8bf30ac1c1ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beginTile: 6
+  beginTile: 5
   MovingBackSpeed: 2
   DashSpeed: 7
   DashDistance: 3
@@ -2285,7 +2285,7 @@ MonoBehaviour:
   - name: Credit
     clip: {fileID: 8300000, guid: 89bc2559480815248b6dac3ee9a1d2ad, type: 3}
   - name: Game
-    clip: {fileID: 8300000, guid: 5fcb522b38b296845b03b67f168b358d, type: 3}
+    clip: {fileID: 8300000, guid: bd46b514468e54943880f5104c87681f, type: 3}
   - name: Podium
     clip: {fileID: 8300000, guid: 39fab9a79962f8f44a3c09203d6d04eb, type: 3}
 --- !u!82 &769382867

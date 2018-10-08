@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224379358976336838}
   - component: {fileID: 114967100083944210}
   m_Layer: 5
-  m_Name: First Player
+  m_Name: Podium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
