@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69279d584f631f34c9d8bf30ac1c1ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beginTile: 4
+  beginTile: 6
   moveCurve:
     serializedVersion: 2
     m_Curve: []
