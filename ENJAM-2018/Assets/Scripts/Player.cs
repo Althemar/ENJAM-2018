@@ -36,6 +36,8 @@ namespace ENJAM2018
 		private ParticleSystem particleSystemFail;
 		private ParticleSystem particleSystemCombo;
 
+        float xOffset;
+
 		public bool Lost
         {
             get { return lost; }
@@ -84,6 +86,12 @@ namespace ENJAM2018
             get { return punched; }
             set { punched = value; }
         }
+
+        public float XOffset
+        {
+            get { return xOffset; }
+            set { xOffset = value; }
+        }
         
         private void Start() {
 			particleSystemDash = transform.Find("ParticlesDash").GetComponent<ParticleSystem>();
@@ -105,7 +113,7 @@ namespace ENJAM2018
             tile = level.Tiles[playerManager.beginTile];
             tile.AddPlayerOnTile(this);
             float tileX = tile.gameObject.transform.position.x;
-            transform.position = new Vector3(tileX, transform.position.y, transform.position.z);
+            transform.position = new Vector3(tileX + xOffset, transform.position.y, transform.position.z);
         }
 
 		private void Update() {
@@ -129,7 +137,7 @@ namespace ENJAM2018
 
             if (moving) {
                 moveProgress += moveSpeed * Time.fixedDeltaTime;
-                Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x, transform.position.y, transform.position.z);
+                Vector3 moveTarget = new Vector3(tile.gameObject.transform.position.x + xOffset, transform.position.y, transform.position.z);
 
                 transform.position = Vector3.Lerp(transform.position, moveTarget, moveProgress);
 
@@ -169,7 +177,6 @@ namespace ENJAM2018
 				particleSystemDash.Emit(1); // Particles
             }
             else {
-                Debug.Log("MovingBack");
 				if (tile.previous == null) return;
                 tile = tile.previous;
                 moveSpeed = playerManager.MovebackSpeed;

@@ -17,8 +17,8 @@ namespace ENJAM2018
             get { return players; }
         }
 
+        
 
-        public AnimationCurve moveCurve;
 
         [Header("Move variables")]
         public float MovingBackSpeed;
