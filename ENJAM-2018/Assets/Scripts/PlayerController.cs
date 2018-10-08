@@ -54,7 +54,7 @@ namespace ENJAM2018
 
 
         void Update() {
-            if (!player.Playing) {
+            if (!player.Playing || GameManager.Instance.GameState != GameManager.GameStates.playing) {
                 return;
             }
 
@@ -64,7 +64,7 @@ namespace ENJAM2018
                     player.CheckInput(inputManager.keyMapping[i].KeyCode);
                 }
             }
-
+            /*
             float leftTrigger = Input.GetAxisRaw("Trigger Left Xbox P" + (int)(owner + 1));
             float rightTrigger = Input.GetAxisRaw("Trigger Left Xbox P" + (int)(owner + 1));
             if (leftTrigger > 0.5 || rightTrigger > 0.5) {
@@ -80,7 +80,7 @@ namespace ENJAM2018
             }
             if (rightTrigger < 0.5) {
                 triggerRightIsDown = false;
-            }
+            }*/
 
         }
     }
