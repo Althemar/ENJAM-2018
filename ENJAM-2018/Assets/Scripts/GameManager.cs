@@ -30,11 +30,12 @@ namespace ENJAM2018
             ending
         }
 
-        GameStates gameState = GameStates.playing;
+        GameStates gameState = GameStates.beginning;
 
         public GameStates GameState
         {
             get { return gameState; }
+            set { gameState = value; }
         }
 
         private void Awake() {
@@ -44,13 +45,15 @@ namespace ENJAM2018
             else {
                 Destroy(gameObject);
             }
-            SoundManager.Instance.PlayUnlocalized("Game");
+
 
         }
 
 
         private void Start() {
 
+
+            SoundManager.Instance.PlayUnlocalized("Game");
             GameObject selectedPlayersGo = GameObject.Find("SelectedPlayersKeeper");
             SelectedPlayersKeeper selectedPlayers = null;
           
@@ -62,7 +65,6 @@ namespace ENJAM2018
             float yPos, xPos;
             
             if (NumberOfPlayers % 2 == 0) {
-                //yPos = 0 + NumberOfPlayers / 2 - YspaceBetweenPlayers / 2;
                 yPos = 0 + YspaceBetweenPlayers * (NumberOfPlayers / 2) - YspaceBetweenPlayers / 2;
                 xPos = 0 - XspaceBetweenPlayers * ( NumberOfPlayers / 2 ) + XspaceBetweenPlayers / 2 ;
                

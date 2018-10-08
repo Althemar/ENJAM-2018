@@ -19,9 +19,11 @@ namespace ENJAM2018
             
             scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 
+            int podiumId = 0;
             for (int i = scoreKeeper.Scores.Count - 1 ; i >= 0; i--) {
 
-                playerPodiums[i].SetPodium( scoreKeeper.Characters[i], scoreKeeper.Scores[i]);
+                playerPodiums[podiumId].SetPodium( scoreKeeper.Characters[i], scoreKeeper.Scores[i]);
+                podiumId++;
             }
 
             Destroy(scoreKeeper.gameObject);
