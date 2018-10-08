@@ -23,7 +23,7 @@ namespace ENJAM2018 {
                 DontDestroyOnLoad(gameObject);
             }
             else {
-                Destroy(gameObject);
+                
             }
         }
 

@@ -16,6 +16,7 @@ public class CharacterSelection : MonoBehaviour {
     public Character selectedCharacter;
 
     AudioSource audioSource;
+    Animator animator;
 
     bool selected;
     int player = -1;
@@ -26,8 +27,11 @@ public class CharacterSelection : MonoBehaviour {
     }
 
     private void Start() {
-        QuitGame();
         audioSource = GetComponent<AudioSource>();
+        animator = characterSprite.GetComponent<Animator>();
+        QuitGame();
+
+
     }
 
     public bool Selected
@@ -44,6 +48,7 @@ public class CharacterSelection : MonoBehaviour {
         characterSprite.sprite = character.sprite;
         characterButton.sprite = QuitButton;
         audioSource.PlayOneShot(character.selectionSound);
+        animator.runtimeAnimatorController = (RuntimeAnimatorController) character.animator;
 
         characterSprite.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, character.uiAdaptSize);
         characterSprite.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, character.uiAdaptSize);
@@ -58,5 +63,6 @@ public class CharacterSelection : MonoBehaviour {
         characterSprite.sprite = null;
         characterSprite.gameObject.SetActive(false);
         characterButton.sprite = JoinButton;
+        animator.runtimeAnimatorController = null;
     }
 }
