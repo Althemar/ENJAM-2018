@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/damien_scene.unity
     guid: 56d3c29329590c246815c982fa907cff
+  - enabled: 1
+    path: Assets/Scenes/creditsdamien.unity
+    guid: 777b79e41a17760469776dac1df949f1
   m_configObjects: {}
