@@ -36,6 +36,8 @@ namespace ENJAM2018 {
 			AudioAsset asset = GetAsset(name);
             source.Stop();
 			source.PlayOneShot(asset.clip);
+            source.clip = asset.clip;
+            source.Play();
 		}
 
 		public AudioAsset GetAsset(string name) {

@@ -17,13 +17,20 @@ namespace ENJAM2018
             gameObject.SetActive(false);
         }
 
-        public void SetPodium(Character character, int score = -1) {
+        public void SetPodium(Character character, int score = -1, int position = 0) {
             gameObject.SetActive(true);
             PlayerNameText.text = character.name;
             if (score != -1) {
                 PlayerScoreText.text = "Score : " + score;
             }
             CharacterImage.sprite = character.sprite;
+
+            Animator animator = CharacterImage.GetComponent<Animator>();
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)character.animator;
+            
+            if (position == 0) {
+                animator.SetTrigger("Win");
+            }
         }
     }
 }

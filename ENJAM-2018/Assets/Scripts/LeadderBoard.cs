@@ -22,7 +22,7 @@ namespace ENJAM2018
             int podiumId = 0;
             for (int i = scoreKeeper.Scores.Count - 1 ; i >= 0; i--) {
 
-                playerPodiums[podiumId].SetPodium( scoreKeeper.Characters[i], scoreKeeper.Scores[i]);
+                playerPodiums[podiumId].SetPodium( scoreKeeper.Characters[i], scoreKeeper.Scores[i], podiumId);
                 podiumId++;
             }
 
