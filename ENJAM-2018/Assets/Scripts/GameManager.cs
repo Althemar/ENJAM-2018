@@ -23,6 +23,10 @@ namespace ENJAM2018
         public float XspaceBetweenPlayers;
         public float YspaceBetweenPlayers;
 
+        [Header("Sounds")]
+        public AudioClip go321Sound;
+        public AudioClip oneLeftSound;
+
         public enum GameStates
         {
             beginning,
@@ -31,6 +35,8 @@ namespace ENJAM2018
         }
 
         GameStates gameState = GameStates.beginning;
+
+        AudioSource audioSource;
 
         public GameStates GameState
         {
@@ -52,8 +58,11 @@ namespace ENJAM2018
 
         private void Start() {
 
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(go321Sound);
 
             SoundManager.Instance.PlayUnlocalized("Game");
+
             GameObject selectedPlayersGo = GameObject.Find("SelectedPlayersKeeper");
             SelectedPlayersKeeper selectedPlayers = null;
           
@@ -131,11 +140,19 @@ namespace ENJAM2018
         }
 
         public void EndGame() {
+            int remainingPlayers = 0;
             for (int i = 0; i < PlayersManager.Instance.Players.Count; i++) {
                 if (!PlayersManager.Instance.Players[i].Lost) {
-                    return;
+                    remainingPlayers++;
                 }
             }
+            if (remainingPlayers > 0) {
+                if (remainingPlayers == 1) {
+                    audioSource.PlayOneShot(oneLeftSound);
+                }
+                return;
+            }
+
             gameState = GameStates.ending;
 
             UIManager.Instance.DisplayEndingText();

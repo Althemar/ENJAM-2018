@@ -26,6 +26,8 @@ namespace ENJAM2018
                 podiumId++;
             }
 
+            GetComponent<AudioSource>().PlayOneShot(scoreKeeper.Characters[0].winSound); 
+
             Destroy(scoreKeeper.gameObject);
         }
     }

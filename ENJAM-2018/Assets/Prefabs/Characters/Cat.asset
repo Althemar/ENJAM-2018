@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fe4f9030dd2ce4a9daad1b27a7b92f, type: 3}
   m_Name: Cat
   m_EditorClassIdentifier: 
-  name: Cat
+  name: Un chat
   sprite: {fileID: 21300000, guid: 64dba2d8ff7a83a4a986b78e9c298f5b, type: 3}
   faceSprite: {fileID: 21300000, guid: 7c998f35fd9aa4a49bbd22c3120f4ec1, type: 3}
   animator: {fileID: 9100000, guid: 565d21147c9d4c248bd642ac4db1a33c, type: 2}

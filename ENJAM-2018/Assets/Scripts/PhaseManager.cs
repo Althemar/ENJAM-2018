@@ -3,6 +3,8 @@
 namespace ENJAM2018 {
 	public class PhaseManager : MonoBehaviour {
 
+        AudioSource audioSource;
+
 		[System.Serializable]
 		public struct Phase {
 			public float probDown;		// A
@@ -13,6 +15,7 @@ namespace ENJAM2018 {
 			public float length;
 			public float startSpeed;
 			public float endSpeed;
+            public AudioClip nextPhaseClip;
 		}
 
 		private static PhaseManager instance;
@@ -25,8 +28,12 @@ namespace ENJAM2018 {
 				return instance;
 			}
 		}
-		
-		[SerializeField] private Phase[] phases;
+
+        private void Start() {
+            audioSource = GetComponent<AudioSource>();
+        }
+
+        [SerializeField] private Phase[] phases;
 		public Phase currentPhase { get; private set; }
 		private int phaseIndex = 0;
 		private float phaseStartTime;
@@ -52,6 +59,7 @@ namespace ENJAM2018 {
 			phaseStartTime = Time.time;
 			if (phaseIndex < phases.Length - 1) {
 				Debug.Log("Phase " + phaseIndex + " Ended! ... Starting Phase " + (phaseIndex + 1));
+                audioSource.PlayOneShot(phases[phaseIndex + 1].nextPhaseClip);
 				currentPhase = phases[++phaseIndex];
 			}
 
