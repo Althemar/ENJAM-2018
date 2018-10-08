@@ -25,6 +25,11 @@ namespace ENJAM2018 {
 		private GameObject[] grounds;
 		private int activeGrounds = 1;
 
+        public float TileLineYPos
+        {
+            get { return tileLineYPos; }
+        }
+
 		private void Awake() {
 			phaseManager = PhaseManager.I;
 			generator = GetComponent<SequenceGenerator>();

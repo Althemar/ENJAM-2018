@@ -29,7 +29,7 @@ namespace ENJAM2018
             ending
         }
 
-        GameStates gameState = GameStates.beginning;
+        GameStates gameState = GameStates.playing;
 
         public GameStates GameState
         {
@@ -71,6 +71,7 @@ namespace ENJAM2018
             else {
                 yPos = 0;
             }
+            yPos += Level.GetComponent<LevelSequence>().TileLineYPos;
 
             int playerId = 0;
 
@@ -93,11 +94,13 @@ namespace ENJAM2018
                     float scale = player.transform.localScale.x;
                     player.Character = selectedPlayers.SelectedCharacters[i];
                     player.transform.localScale = new Vector3(scale * player.Character.adaptSize, scale * player.Character.adaptSize, 1);
+                    player.scoreUI.SetName(player.Character.name);
 
                 }
                 else {
                     animator.runtimeAnimatorController = (RuntimeAnimatorController) testAnimator;
                     player.Character = testCharacter ;
+                    
 
                 }
 
