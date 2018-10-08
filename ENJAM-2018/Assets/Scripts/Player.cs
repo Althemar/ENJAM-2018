@@ -151,6 +151,10 @@ namespace ENJAM2018
             }
         }
 
+        void OnBecameInvisible() {
+            Lose();
+        }
+
         public void Move(bool goForward) {
             moveProgress = 0;
             animator.SetBool("Is Moving", true);
@@ -241,8 +245,11 @@ namespace ENJAM2018
         }
 
         public void Lose() {
-            lost = true;
-            GameManager.Instance.KillPlayer(this);
+            if (!lost) {
+                lost = true;
+                GameManager.Instance.KillPlayer(this);
+            }
+            
         }
 
     }
